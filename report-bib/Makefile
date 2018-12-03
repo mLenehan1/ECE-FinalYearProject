@@ -10,5 +10,5 @@ typeset:
 	  --out          report-bib.pdf \
 	  --latex-engine   xelatex        \
 	  --bibliography biblio.bib     \
-	  --csl style.csl               \
+	  --csl ieee.csl               \
 	  $(FILES)

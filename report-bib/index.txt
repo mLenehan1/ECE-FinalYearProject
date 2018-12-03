@@ -4,8 +4,6 @@ background/background.md
 background/software.md
 background/hardware.md
 solutions/probsol.md
-solutions/problems.md
-solutions/solutions.md
 plan/projectplan.md
 plan/semester1plan.md
 plan/semester2plan.md

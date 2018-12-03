@@ -1,3 +1,0 @@
-## Solutions
-
-test
