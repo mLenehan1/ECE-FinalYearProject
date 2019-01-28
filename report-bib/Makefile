@@ -7,7 +7,7 @@ typeset:
 	  --from         markdown       \
 	  --to           latex          \
 	  --template     template.tex   \
-	  --out          report-bib.pdf \
+	  --out          FYPStatusReport.pdf \
 	  --latex-engine   xelatex        \
 	  --bibliography biblio.bib     \
 	  --csl ieee.csl               \

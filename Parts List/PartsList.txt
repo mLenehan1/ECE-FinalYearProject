@@ -1,0 +1,16 @@
+# Required Parts
+
+\begin{center}
+\begin{tabular}{ ||c | c | c | c | c|| }
+\hline
+Part & Vendor & Price & Link & Quantity \\
+\hline \hline
+Raspberry Pi 3 Model B+ & Farnell & €33.99 & https://ie.farnell.com/raspberry-pi/rpi3-modbp/sbc-board-raspberry-pi-3-model/dp/2842228 & 3 \\
+\hline
+T5989DV - AC/DC Power Supply, 1 Output, 13 W, 5.1 V, 2.5 A & Farnell & €7.99 & https://ie.farnell.com/raspberry-pi/t5989dv/psu-rpi-5v-2-5a-multi-plug-blk/dp/2534971 & 3 \\
+\hline
+Adafruit I2S Audio Bonnet for Raspberry Pi - UDA1334A & Adafruit & $9.95 & https://www.adafruit.com/product/4037 & 3 \\
+\hline
+SanDisk SDSDQAF3-008G-I & Mouser Electronics & €9.36 & https://www.mouser.ie/ProductDetail/SanDisk/SDSDQAF3-008G-I?qs=sGAEpiMZZMtyMAXUUxCBE5IlUgcznewuII5iIueKP0p3215DGin%2fpg%3d%3d & 3 \\
+\end{tabular}
+\end{center}
