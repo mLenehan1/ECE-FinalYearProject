@@ -2,19 +2,19 @@
 
 ## Requirements
 
-[] Title Slide
- [] Project Title
- [] Student Name
- [] ID Number
- [] Supervisor Name
-[] Project Description
- [] What the problem is
- [] Why it's a problem
-[] Proposed Solutions
- [] Detail about proposed solution - Not too much in depth *Confusing*
-[] Work to Date
- [] Progress in addressing problem
-[] Project Plan for Semester 2
+[x] Title Slide
+ [x] Project Title
+ [x] Student Name
+ [x] ID Number
+ [x] Supervisor Name
+[x] Project Description
+ [x] What the problem is
+ [x] Why it's a problem
+[x] Proposed Solutions
+ [x] Detail about proposed solution - Not too much in depth *Confusing*
+[x] Work to Date
+ [x] Progress in addressing problem
+[x] Project Plan for Semester 2
 
 ## Plan
 
