@@ -946,8 +946,8 @@
     CPU & \multicolumn{2}{|c|}{56.93} & \multicolumn{2}{|c|}{58.94} & \multicolumn{2}{|c|}{60.15} \\
     \hline\hline
     \end{tabular}
-    \caption{MPD Server Device Sensor Parameters}
-    \label{MPDserverSensorTab}
+    \caption{Mopidy Server Device Sensor Parameters}
+    \label{MopidyserverSensorTab}
 \end{table}
 
 ### Volumio
@@ -1420,7 +1420,7 @@
     CPU & \multicolumn{2}{|c|}{58.53} & \multicolumn{2}{|c|}{59.97} & \multicolumn{2}{|c|}{60.69} \\
     \hline\hline
     \end{tabular}
-    \caption{MPD Server Device Sensor Parameters}
-    \label{MPDserverSensorTab}
+    \caption{Volumio Server Device Sensor Parameters}
+    \label{VolumioserverSensorTab}
 \end{table}
 

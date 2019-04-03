@@ -7,8 +7,12 @@ typeset:
 	  --from         markdown       \
 	  --to           latex          \
 	  --template     template.tex   \
-	  --out          FYPProjectReport.pdf \
+	  --out          FYPProjectReport.tex \
 	  --latex-engine   xelatex        \
 	  --bibliography References/biblio.bib     \
-	  --csl References/ieee.csl               \
+	  --biblatex               \
 	  $(FILES)
+	xelatex FYPProjectReport.tex
+	bibtex FYPProjectReport.aux
+	xelatex FYPProjectReport.tex
+	xelatex FYPProjectReport.tex

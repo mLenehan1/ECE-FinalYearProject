@@ -1,0 +1,83 @@
+\select@language {english}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces BeagleBone Black\cite {BBB18}}}{11}{figure.5.1}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Asus TinkerBoard}}{12}{figure.5.2}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Raspberry Pi 3 Model B+\cite {RPI18}}}{13}{figure.5.3}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Adafruit I2S Audio Bonnet \cite {adafruit}}}{14}{figure.5.4}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {9.1}{\ignorespaces Recorded Music Revenues for the United States \cite {SpotPay18}}}{33}{figure.9.1}
+\contentsline {figure}{\numberline {9.2}{\ignorespaces Streaming Service Subscriber Numbers - Jan 2018 \cite {SpotPay18}}}{34}{figure.9.2}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {11.1}{\ignorespaces MPD Disk I/O on Client and Server Device}}{36}{figure.11.1}
+\contentsline {figure}{\numberline {11.2}{\ignorespaces MPD Client and Server Device Disk Latency}}{36}{figure.11.2}
+\contentsline {figure}{\numberline {11.3}{\ignorespaces MPD Client and Server Device Disk Throughput}}{37}{figure.11.3}
+\contentsline {figure}{\numberline {11.4}{\ignorespaces MPD Client and Server Device Disk Utilization}}{37}{figure.11.4}
+\contentsline {figure}{\numberline {11.5}{\ignorespaces MPD Client and Server Device Firewall Throughput}}{37}{figure.11.5}
+\contentsline {figure}{\numberline {11.6}{\ignorespaces MPD Client and Server Device Eth Errors}}{38}{figure.11.6}
+\contentsline {figure}{\numberline {11.7}{\ignorespaces MPD Client and Server Device Eth Traffic}}{38}{figure.11.7}
+\contentsline {figure}{\numberline {11.8}{\ignorespaces MPD Client and Server Device Wlan Errors}}{38}{figure.11.8}
+\contentsline {figure}{\numberline {11.9}{\ignorespaces MPD Client and Server Device Wlan Traffic}}{39}{figure.11.9}
+\contentsline {figure}{\numberline {11.10}{\ignorespaces MPD Client and Server Device Netstat}}{39}{figure.11.10}
+\contentsline {figure}{\numberline {11.11}{\ignorespaces MPD Client and Server Device Processes}}{39}{figure.11.11}
+\contentsline {figure}{\numberline {11.12}{\ignorespaces MPD Client and Server Device Number of Threads}}{40}{figure.11.12}
+\contentsline {figure}{\numberline {11.13}{\ignorespaces MPD Client and Server Device Load Average}}{40}{figure.11.13}
+\contentsline {figure}{\numberline {11.14}{\ignorespaces MPD Client and Server Device Individual Interrupts}}{41}{figure.11.14}
+\contentsline {figure}{\numberline {11.15}{\ignorespaces MPD Client and Server Device Interrupts and Context Switches}}{41}{figure.11.15}
+\contentsline {figure}{\numberline {11.16}{\ignorespaces MPD Client and Server Device Memory Usage}}{42}{figure.11.16}
+\contentsline {figure}{\numberline {11.17}{\ignorespaces MPD Client and Server Device Fork Rate}}{42}{figure.11.17}
+\contentsline {figure}{\numberline {11.18}{\ignorespaces MPD Client and Server Device CPU Usage}}{42}{figure.11.18}
+\contentsline {figure}{\numberline {11.19}{\ignorespaces MPD Client and Server Device CPU Frequency}}{43}{figure.11.19}
+\contentsline {figure}{\numberline {11.20}{\ignorespaces MPD Client and Server Device CPU Frequency Scaling}}{43}{figure.11.20}
+\contentsline {figure}{\numberline {11.21}{\ignorespaces MPD Client and Server Device CPU Temperature}}{43}{figure.11.21}
+\contentsline {figure}{\numberline {11.22}{\ignorespaces Mmopidy Disk I/O on Client and Server Device}}{44}{figure.11.22}
+\contentsline {figure}{\numberline {11.23}{\ignorespaces Mopidy Client and Server Device Disk Latency}}{44}{figure.11.23}
+\contentsline {figure}{\numberline {11.24}{\ignorespaces Mopidy Client and Server Device Disk Throughput}}{44}{figure.11.24}
+\contentsline {figure}{\numberline {11.25}{\ignorespaces Mopidy Client and Server Device Disk Utilization}}{45}{figure.11.25}
+\contentsline {figure}{\numberline {11.26}{\ignorespaces Mopidy Client and Server Device Firewall Throughput}}{45}{figure.11.26}
+\contentsline {figure}{\numberline {11.27}{\ignorespaces Mopidy Client and Server Device Eth Errors}}{45}{figure.11.27}
+\contentsline {figure}{\numberline {11.28}{\ignorespaces Mopidy Client and Server Device Eth Traffic}}{46}{figure.11.28}
+\contentsline {figure}{\numberline {11.29}{\ignorespaces Mopidy Client and Server Device Wlan Errors}}{46}{figure.11.29}
+\contentsline {figure}{\numberline {11.30}{\ignorespaces Mopidy Client and Server Device Wlan Traffic}}{46}{figure.11.30}
+\contentsline {figure}{\numberline {11.31}{\ignorespaces Mopidy Client and Server Device Netstat}}{47}{figure.11.31}
+\contentsline {figure}{\numberline {11.32}{\ignorespaces Mopidy Client and Server Device Processes}}{47}{figure.11.32}
+\contentsline {figure}{\numberline {11.33}{\ignorespaces Mopidy Client and Server Device Process Priority}}{47}{figure.11.33}
+\contentsline {figure}{\numberline {11.34}{\ignorespaces Mopidy Client and Server Device Number of Threads}}{48}{figure.11.34}
+\contentsline {figure}{\numberline {11.35}{\ignorespaces Mopidy Client and Server Device Load Average}}{48}{figure.11.35}
+\contentsline {figure}{\numberline {11.36}{\ignorespaces Mopidy Client and Server Device Individual Interrupts}}{49}{figure.11.36}
+\contentsline {figure}{\numberline {11.37}{\ignorespaces Mopidy Client and Server Device Interrupts and Context Switches}}{49}{figure.11.37}
+\contentsline {figure}{\numberline {11.38}{\ignorespaces Mopidy Client and Server Device Memory Usage}}{50}{figure.11.38}
+\contentsline {figure}{\numberline {11.39}{\ignorespaces Mopidy Client and Server Device Fork Rate}}{50}{figure.11.39}
+\contentsline {figure}{\numberline {11.40}{\ignorespaces Mopidy Client and Server Device CPU Usage}}{50}{figure.11.40}
+\contentsline {figure}{\numberline {11.41}{\ignorespaces Mopidy Client and Server Device CPU Frequency}}{51}{figure.11.41}
+\contentsline {figure}{\numberline {11.42}{\ignorespaces Mopidy Client and Server Device CPU Frequency Scaling}}{51}{figure.11.42}
+\contentsline {figure}{\numberline {11.43}{\ignorespaces Mopidy Client and Server Device CPU Temperature}}{51}{figure.11.43}
+\contentsline {figure}{\numberline {11.44}{\ignorespaces Volumio Disk I/O on Client and Server Device}}{52}{figure.11.44}
+\contentsline {figure}{\numberline {11.45}{\ignorespaces Volumio Client and Server Device Disk Latency}}{52}{figure.11.45}
+\contentsline {figure}{\numberline {11.46}{\ignorespaces Volumio Client and Server Device Disk Throughput}}{52}{figure.11.46}
+\contentsline {figure}{\numberline {11.47}{\ignorespaces Volumio Client and Server Device Disk Utilization}}{53}{figure.11.47}
+\contentsline {figure}{\numberline {11.48}{\ignorespaces Volumio Client and Server Device Firewall Throughput}}{53}{figure.11.48}
+\contentsline {figure}{\numberline {11.49}{\ignorespaces Volumio Client and Server Device Eth Errors}}{53}{figure.11.49}
+\contentsline {figure}{\numberline {11.50}{\ignorespaces Volumio Client and Server Device Eth Traffic}}{54}{figure.11.50}
+\contentsline {figure}{\numberline {11.51}{\ignorespaces Volumio Client and Server Device Wlan Errors}}{54}{figure.11.51}
+\contentsline {figure}{\numberline {11.52}{\ignorespaces Volumio Client and Server Device Wlan Traffic}}{54}{figure.11.52}
+\contentsline {figure}{\numberline {11.53}{\ignorespaces Volumio Client and Server Device Netstat}}{55}{figure.11.53}
+\contentsline {figure}{\numberline {11.54}{\ignorespaces Volumio Client and Server Device Processes}}{55}{figure.11.54}
+\contentsline {figure}{\numberline {11.55}{\ignorespaces Volumio Client and Server Device Processes}}{55}{figure.11.55}
+\contentsline {figure}{\numberline {11.56}{\ignorespaces Volumio Client and Server Device Number of Threads}}{56}{figure.11.56}
+\contentsline {figure}{\numberline {11.57}{\ignorespaces Volumio Client and Server Device Load Average}}{56}{figure.11.57}
+\contentsline {figure}{\numberline {11.58}{\ignorespaces Volumio Client and Server Device Individual Interrupts}}{57}{figure.11.58}
+\contentsline {figure}{\numberline {11.59}{\ignorespaces Volumio Client and Server Device Interrupts and Context Switches}}{57}{figure.11.59}
+\contentsline {figure}{\numberline {11.60}{\ignorespaces Volumio Client and Server Device Memory Usage}}{58}{figure.11.60}
+\contentsline {figure}{\numberline {11.61}{\ignorespaces Volumio Client and Server Device Fork Rate}}{58}{figure.11.61}
+\contentsline {figure}{\numberline {11.62}{\ignorespaces Volumio Client and Server Device CPU Usage}}{58}{figure.11.62}
+\contentsline {figure}{\numberline {11.63}{\ignorespaces Volumio Client and Server Device CPU Frequency}}{59}{figure.11.63}
+\contentsline {figure}{\numberline {11.64}{\ignorespaces Volumio Client and Server Device CPU Frequency Scaling}}{59}{figure.11.64}
+\contentsline {figure}{\numberline {11.65}{\ignorespaces Volumio Client and Server Device CPU Temperature}}{59}{figure.11.65}

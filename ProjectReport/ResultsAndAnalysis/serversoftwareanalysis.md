@@ -1,4 +1,5 @@
-### Audio Server Software Results Analysis
+### Audio Server Software Analysis
+\label{AudioServerSoftwareAnalysis}
 
 From the results in Table \ref{MPDclientserverNetTab}, Table
 \ref{MopidyclientserverNetTab}, Table and \ref{VolumioclientserverNetTab}
@@ -41,7 +42,7 @@ average CPU frequency values of $1.4GHz$, with average frequecy scaling values
 of $646.91MHz$ and $1.4GHz$ respectively. The low CPU frequency value of the MPD
 Server device can be attributed to a number of issues, such as thermal
 throttling, however, due to idling, the device can also lower CPU frequency to
-600MHz[@RPiFreq].
+600MHz\cite{RPiFreq}.
 
 While streaming, there were no noticable audio issues detected. Audio played
 from both the audio serving device, and the client device, streamed via

@@ -414,7 +414,7 @@
 \includegraphics{ResultsAndAnalysis/VolumioServerTestImages/021VolumioProcessPriority.png}
 \centering
 \caption{Volumio Client and Server Device Processes}
-\label{VolumioProcesses}
+\label{VolumioProcessPriority}
 \end{figure}
 
 \begin{figure}[H]

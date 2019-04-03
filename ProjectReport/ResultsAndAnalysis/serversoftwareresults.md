@@ -463,7 +463,7 @@ and average temperature of 58.94 \degree C.
     \hline\hline
     \end{tabular}
     \caption{Mopidy SnapClient Device Sensor Parameters}
-    \label{MopidyclientSensorTab}
+    \label{MopidyclientserverSensorTab}
 \end{table}
 
 ### Volumio
