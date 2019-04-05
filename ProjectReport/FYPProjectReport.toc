@@ -16,33 +16,36 @@
 \contentsline {subsection}{\nonumberline Bluetooth Beacons}{16}{section*.10}
 \contentsline {subsection}{\nonumberline 802.11MC WiFi}{16}{section*.11}
 \contentsline {chapter}{\numberline {6}Concepts, Modelling, and Design}{17}{chapter.6}
-\contentsline {chapter}{\numberline {7}Implementation and Testing}{18}{chapter.7}
-\contentsline {section}{\numberline {7.1}Audio Server Software Testing Implementation}{18}{section.7.1}
-\contentsline {subsection}{\nonumberline SSH}{18}{section*.12}
-\contentsline {subsection}{\nonumberline Munin}{18}{section*.13}
-\contentsline {subsection}{\nonumberline Cron}{18}{section*.14}
-\contentsline {subsection}{\nonumberline MPC}{19}{section*.15}
-\contentsline {section}{\numberline {7.2}Audio Server Testing Procedure}{19}{section.7.2}
-\contentsline {subsection}{\nonumberline Testing Steps}{20}{section*.16}
-\contentsline {chapter}{\numberline {8}Results and Analysis}{21}{chapter.8}
-\contentsline {section}{\numberline {8.1}Audio Server Software }{21}{section.8.1}
-\contentsline {subsection}{\nonumberline MPD}{21}{section*.17}
-\contentsline {subsection}{\nonumberline Mopidy}{24}{section*.18}
-\contentsline {subsection}{\nonumberline Volumio}{27}{section*.19}
-\contentsline {subsection}{\nonumberline Audio Server Software Analysis}{30}{section*.20}
-\contentsline {section}{\numberline {8.2}Client Tracking}{31}{section.8.2}
-\contentsline {chapter}{\numberline {9}Ethics}{32}{chapter.9}
-\contentsline {section}{\numberline {9.1}Audio Tracks}{32}{section.9.1}
-\contentsline {subsection}{\nonumberline Streaming Solutions}{32}{section*.21}
-\contentsline {subsection}{\nonumberline Audio Piracy}{34}{section*.22}
-\contentsline {section}{\numberline {9.2}Listener Tracking}{34}{section.9.2}
-\contentsline {chapter}{\numberline {10}Conclusions and Recommendations}{35}{chapter.10}
-\contentsline {chapter}{\numberline {11}Appendix }{36}{chapter.11}
-\contentsline {section}{\numberline {11.1}Audio Server Software Munin Data}{36}{section.11.1}
-\contentsline {subsection}{\nonumberline MPD}{36}{section*.23}
-\contentsline {subsection}{\nonumberline Mopidy}{44}{section*.24}
-\contentsline {subsection}{\nonumberline Volumio}{52}{section*.25}
-\contentsline {section}{\numberline {11.2}Audio Server Software Munin Data Tables }{60}{section.11.2}
-\contentsline {subsection}{\nonumberline MPD}{60}{section*.26}
-\contentsline {subsection}{\nonumberline Mopidy}{67}{section*.27}
-\contentsline {subsection}{\nonumberline Volumio}{74}{section*.28}
+\contentsline {chapter}{\numberline {7}Experimental Equipment and Procedures}{18}{chapter.7}
+\contentsline {section}{\numberline {7.1}Experiment Equipment Requirements}{18}{section.7.1}
+\contentsline {section}{\numberline {7.2}Experimental Procedures}{18}{section.7.2}
+\contentsline {subsection}{\nonumberline Audio Server Software Testing Procedure}{18}{section*.12}
+\contentsline {subsection}{\nonumberline Testing Steps:}{19}{section*.13}
+\contentsline {chapter}{\numberline {8}Implementation and Testing}{20}{chapter.8}
+\contentsline {section}{\numberline {8.1}Audio Server Software Testing Implementation}{20}{section.8.1}
+\contentsline {subsection}{\nonumberline SSH}{20}{section*.14}
+\contentsline {subsection}{\nonumberline Munin}{20}{section*.15}
+\contentsline {subsection}{\nonumberline Cron}{20}{section*.16}
+\contentsline {subsection}{\nonumberline MPC}{21}{section*.17}
+\contentsline {chapter}{\numberline {9}Results and Analysis}{22}{chapter.9}
+\contentsline {section}{\numberline {9.1}Audio Server Software }{22}{section.9.1}
+\contentsline {subsection}{\nonumberline MPD}{22}{section*.18}
+\contentsline {subsection}{\nonumberline Mopidy}{25}{section*.19}
+\contentsline {subsection}{\nonumberline Volumio}{28}{section*.20}
+\contentsline {subsection}{\nonumberline Audio Server Software Analysis}{31}{section*.21}
+\contentsline {section}{\numberline {9.2}Client Tracking}{32}{section.9.2}
+\contentsline {chapter}{\numberline {10}Ethics}{33}{chapter.10}
+\contentsline {section}{\numberline {10.1}Audio Tracks}{33}{section.10.1}
+\contentsline {subsection}{\nonumberline Streaming Solutions}{33}{section*.22}
+\contentsline {subsection}{\nonumberline Audio Piracy}{35}{section*.23}
+\contentsline {section}{\numberline {10.2}Listener Tracking}{35}{section.10.2}
+\contentsline {chapter}{\numberline {11}Conclusions and Recommendations}{36}{chapter.11}
+\contentsline {chapter}{\numberline {12}Appendix }{37}{chapter.12}
+\contentsline {section}{\numberline {12.1}Audio Server Software Munin Data}{37}{section.12.1}
+\contentsline {subsection}{\nonumberline MPD}{37}{section*.24}
+\contentsline {subsection}{\nonumberline Mopidy}{45}{section*.25}
+\contentsline {subsection}{\nonumberline Volumio}{53}{section*.26}
+\contentsline {section}{\numberline {12.2}Audio Server Software Munin Data Tables }{61}{section.12.2}
+\contentsline {subsection}{\nonumberline MPD}{61}{section*.27}
+\contentsline {subsection}{\nonumberline Mopidy}{68}{section*.28}
+\contentsline {subsection}{\nonumberline Volumio}{75}{section*.29}

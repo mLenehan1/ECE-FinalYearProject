@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2018.10.16)  3 APR 2019 09:55
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2018.10.16)  4 APR 2019 20:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1271,37 +1271,41 @@ chapter 6.
 chapter 7.
 [18
 
-] [19] [20]
+] [19]
 chapter 8.
-[21
+[20
+
+] [21]
+chapter 9.
+[22
 
 ]
 Overfull \vbox (41.599pt too high) has occurred while \output is active []
 
 
-[22] [23] [24]
+[23] [24] [25]
 Overfull \vbox (41.599pt too high) has occurred while \output is active []
 
 
-[25] [26] [27]
+[26] [27] [28]
 Overfull \vbox (41.599pt too high) has occurred while \output is active []
 
 
-[28] [29] [30] [31]
-chapter 9.
+[29] [30] [31] [32]
+chapter 10.
 File: Ethics/StreamBecomesRiver.png Graphic file (type bmp)
 <Ethics/StreamBecomesRiver.png>
-[32
+[33
 
 ]
 File: Ethics/ChartTopper.png Graphic file (type bmp)
 <Ethics/ChartTopper.png>
- [33] [34]
-chapter 10.
-[35
+ [34] [35]
+chapter 11.
+[36
 
 ]
-chapter 11.
+chapter 12.
 File: ResultsAndAnalysis/MPDServerTestImages/005MPDDiskIO.png Graphic file (typ
 e bmp)
 <ResultsAndAnalysis/MPDServerTestImages/005MPDDiskIO.png>
@@ -1311,7 +1315,7 @@ File: ResultsAndAnalysis/MPDServerTestImages/006MPDDiskLatency.png Graphic file
 File: ResultsAndAnalysis/MPDServerTestImages/007MPDDiskThroughput.png Graphic f
 ile (type bmp)
 <ResultsAndAnalysis/MPDServerTestImages/007MPDDiskThroughput.png>
-[36
+[37
 
 ]
 File: ResultsAndAnalysis/MPDServerTestImages/008MPDDiskUtilization.png Graphic 
@@ -1323,7 +1327,7 @@ ic file (type bmp)
 File: ResultsAndAnalysis/MPDServerTestImages/009MPDEth0Errors.png Graphic file 
 (type bmp)
 <ResultsAndAnalysis/MPDServerTestImages/009MPDEth0Errors.png>
- [37]
+ [38]
 File: ResultsAndAnalysis/MPDServerTestImages/010MPDEth0Traffic.png Graphic file
  (type bmp)
 <ResultsAndAnalysis/MPDServerTestImages/010MPDEth0Traffic.png>
@@ -1333,7 +1337,7 @@ File: ResultsAndAnalysis/MPDServerTestImages/020MPDWlan0Errors.png Graphic file
 File: ResultsAndAnalysis/MPDServerTestImages/021MPDWlan0Traffic.png Graphic fil
 e (type bmp)
 <ResultsAndAnalysis/MPDServerTestImages/021MPDWlan0Traffic.png>
- [38]
+ [39]
 File: ResultsAndAnalysis/MPDServerTestImages/017MPDNetstat.png Graphic file (ty
 pe bmp)
 <ResultsAndAnalysis/MPDServerTestImages/017MPDNetstat.png>
@@ -1343,14 +1347,14 @@ type bmp)
 File: ResultsAndAnalysis/MPDServerTestImages/018MPDNoOfThreads.png Graphic file
  (type bmp)
 <ResultsAndAnalysis/MPDServerTestImages/018MPDNoOfThreads.png>
- [39]
+ [40]
 File: ResultsAndAnalysis/MPDServerTestImages/015MPDLoadAverage.png Graphic file
  (type bmp)
 <ResultsAndAnalysis/MPDServerTestImages/015MPDLoadAverage.png>
 File: ResultsAndAnalysis/MPDServerTestImages/013MPDIndividualInterrupts.png Gra
 phic file (type bmp)
 <ResultsAndAnalysis/MPDServerTestImages/013MPDIndividualInterrupts.png>
- [40]
+ [41]
 File: ResultsAndAnalysis/MPDServerTestImages/014MPDInterruptsAndContextSwitches
 .png Graphic file (type bmp)
 <ResultsAndAnalysis/MPDServerTestImages/014MPDInterruptsAndContextSwitches.png>
@@ -1358,7 +1362,7 @@ File: ResultsAndAnalysis/MPDServerTestImages/014MPDInterruptsAndContextSwitches
 File: ResultsAndAnalysis/MPDServerTestImages/016MPDMemoryUsage.png Graphic file
  (type bmp)
 <ResultsAndAnalysis/MPDServerTestImages/016MPDMemoryUsage.png>
- [41]
+ [42]
 File: ResultsAndAnalysis/MPDServerTestImages/012MPDForkRate.png Graphic file (t
 ype bmp)
 <ResultsAndAnalysis/MPDServerTestImages/012MPDForkRate.png>
@@ -1368,7 +1372,7 @@ ype bmp)
 File: ResultsAndAnalysis/MPDServerTestImages/001MPDCPUFreq.png Graphic file (ty
 pe bmp)
 <ResultsAndAnalysis/MPDServerTestImages/001MPDCPUFreq.png>
- [42]
+ [43]
 File: ResultsAndAnalysis/MPDServerTestImages/002MPDCPUFreqScaling.png Graphic f
 ile (type bmp)
 <ResultsAndAnalysis/MPDServerTestImages/002MPDCPUFreqScaling.png>
@@ -1378,7 +1382,7 @@ pe bmp)
 File: ResultsAndAnalysis/MopidyServerTestImages/005MopidyDiskIO.png Graphic fil
 e (type bmp)
 <ResultsAndAnalysis/MopidyServerTestImages/005MopidyDiskIO.png>
- [43]
+ [44]
 File: ResultsAndAnalysis/MopidyServerTestImages/006MopidyDiskLatency.png Graphi
 c file (type bmp)
 <ResultsAndAnalysis/MopidyServerTestImages/006MopidyDiskLatency.png>
@@ -1388,7 +1392,7 @@ phic file (type bmp)
 File: ResultsAndAnalysis/MopidyServerTestImages/009MopidyDiskUtilization.png Gr
 aphic file (type bmp)
 <ResultsAndAnalysis/MopidyServerTestImages/009MopidyDiskUtilization.png>
- [44]
+ [45]
 File: ResultsAndAnalysis/MopidyServerTestImages/012MopidyFirewallThroughput.png
  Graphic file (type bmp)
 <ResultsAndAnalysis/MopidyServerTestImages/012MopidyFirewallThroughput.png>
@@ -1398,7 +1402,7 @@ File: ResultsAndAnalysis/MopidyServerTestImages/010MopidyEth0Errors.png Graphic
 File: ResultsAndAnalysis/MopidyServerTestImages/011MopidyEth0Traffic.png Graphi
 c file (type bmp)
 <ResultsAndAnalysis/MopidyServerTestImages/011MopidyEth0Traffic.png>
- [45]
+ [46]
 File: ResultsAndAnalysis/MopidyServerTestImages/022MopidyWlan0Errors.png Graphi
 c file (type bmp)
 <ResultsAndAnalysis/MopidyServerTestImages/022MopidyWlan0Errors.png>
@@ -1408,7 +1412,7 @@ ic file (type bmp)
 File: ResultsAndAnalysis/MopidyServerTestImages/018MopidyNetstat.png Graphic fi
 le (type bmp)
 <ResultsAndAnalysis/MopidyServerTestImages/018MopidyNetstat.png>
- [46]
+ [47]
 File: ResultsAndAnalysis/MopidyServerTestImages/020MopidyProcesses.png Graphic 
 file (type bmp)
 <ResultsAndAnalysis/MopidyServerTestImages/020MopidyProcesses.png>
@@ -1418,14 +1422,14 @@ aphic file (type bmp)
 File: ResultsAndAnalysis/MopidyServerTestImages/019MopidyNoOfThreads.png Graphi
 c file (type bmp)
 <ResultsAndAnalysis/MopidyServerTestImages/019MopidyNoOfThreads.png>
- [47]
+ [48]
 File: ResultsAndAnalysis/MopidyServerTestImages/016MopidyLoadAverage.png Graphi
 c file (type bmp)
 <ResultsAndAnalysis/MopidyServerTestImages/016MopidyLoadAverage.png>
 File: ResultsAndAnalysis/MopidyServerTestImages/014MopidyIndividualInterrupts.p
 ng Graphic file (type bmp)
 <ResultsAndAnalysis/MopidyServerTestImages/014MopidyIndividualInterrupts.png>
- [48]
+ [49]
 File: ResultsAndAnalysis/MopidyServerTestImages/015MopidyInterruptsAndContextSw
 itches.png Graphic file (type bmp)
 <ResultsAndAnalysis/MopidyServerTestImages/015MopidyInterruptsAndContextSwitche
@@ -1433,7 +1437,7 @@ s.png>
 File: ResultsAndAnalysis/MopidyServerTestImages/017MopidyMemoryUsage.png Graphi
 c file (type bmp)
 <ResultsAndAnalysis/MopidyServerTestImages/017MopidyMemoryUsage.png>
- [49]
+ [50]
 File: ResultsAndAnalysis/MopidyServerTestImages/013MopidyForkRate.png Graphic f
 ile (type bmp)
 <ResultsAndAnalysis/MopidyServerTestImages/013MopidyForkRate.png>
@@ -1443,7 +1447,7 @@ ile (type bmp)
 File: ResultsAndAnalysis/MopidyServerTestImages/001MopidyCPUFreq.png Graphic fi
 le (type bmp)
 <ResultsAndAnalysis/MopidyServerTestImages/001MopidyCPUFreq.png>
- [50]
+ [51]
 File: ResultsAndAnalysis/MopidyServerTestImages/002MopidyCPUFreqScaling.png Gra
 phic file (type bmp)
 <ResultsAndAnalysis/MopidyServerTestImages/002MopidyCPUFreqScaling.png>
@@ -1454,7 +1458,7 @@ File: ResultsAndAnalysis/VolumioServerTestImages/005VolumioDiskIO.png Graphic f
 ile (type bmp)
 <ResultsAndAnalysis/VolumioServerTestImages/005VolumioDiskIO.png>
 
-[51]
+[52]
 File: ResultsAndAnalysis/VolumioServerTestImages/006VolumioDiskLatency.png Grap
 hic file (type bmp)
 <ResultsAndAnalysis/VolumioServerTestImages/006VolumioDiskLatency.png>
@@ -1464,7 +1468,7 @@ raphic file (type bmp)
 File: ResultsAndAnalysis/VolumioServerTestImages/009VolumioDiskUtilization.png 
 Graphic file (type bmp)
 <ResultsAndAnalysis/VolumioServerTestImages/009VolumioDiskUtilization.png>
- [52]
+ [53]
 File: ResultsAndAnalysis/VolumioServerTestImages/012VolumioFirewallThroughput.p
 ng Graphic file (type bmp)
 <ResultsAndAnalysis/VolumioServerTestImages/012VolumioFirewallThroughput.png>
@@ -1474,7 +1478,7 @@ ic file (type bmp)
 File: ResultsAndAnalysis/VolumioServerTestImages/011VolumioEth0Traffic.png Grap
 hic file (type bmp)
 <ResultsAndAnalysis/VolumioServerTestImages/011VolumioEth0Traffic.png>
- [53]
+ [54]
 File: ResultsAndAnalysis/VolumioServerTestImages/022VolumioWlan0Errors.png Grap
 hic file (type bmp)
 <ResultsAndAnalysis/VolumioServerTestImages/022VolumioWlan0Errors.png>
@@ -1484,7 +1488,7 @@ phic file (type bmp)
 File: ResultsAndAnalysis/VolumioServerTestImages/018VolumioNetstat.png Graphic 
 file (type bmp)
 <ResultsAndAnalysis/VolumioServerTestImages/018VolumioNetstat.png>
- [54]
+ [55]
 File: ResultsAndAnalysis/VolumioServerTestImages/020VolumioProcesses.png Graphi
 c file (type bmp)
 <ResultsAndAnalysis/VolumioServerTestImages/020VolumioProcesses.png>
@@ -1494,7 +1498,7 @@ Graphic file (type bmp)
 File: ResultsAndAnalysis/VolumioServerTestImages/019VolumioNoOfThreads.png Grap
 hic file (type bmp)
 <ResultsAndAnalysis/VolumioServerTestImages/019VolumioNoOfThreads.png>
- [55]
+ [56]
 File: ResultsAndAnalysis/VolumioServerTestImages/016VolumioLoadAverage.png Grap
 hic file (type bmp)
 <ResultsAndAnalysis/VolumioServerTestImages/016VolumioLoadAverage.png>
@@ -1502,7 +1506,7 @@ File: ResultsAndAnalysis/VolumioServerTestImages/014VolumioIndividualInterrupts
 .png Graphic file (type bmp)
 <ResultsAndAnalysis/VolumioServerTestImages/014VolumioIndividualInterrupts.png>
 
- [56]
+ [57]
 File: ResultsAndAnalysis/VolumioServerTestImages/015VolumioInterruptsAndContext
 Switches.png Graphic file (type bmp)
 <ResultsAndAnalysis/VolumioServerTestImages/015VolumioInterruptsAndContextSwitc
@@ -1510,7 +1514,7 @@ hes.png>
 File: ResultsAndAnalysis/VolumioServerTestImages/017VolumioMemoryUsage.png Grap
 hic file (type bmp)
 <ResultsAndAnalysis/VolumioServerTestImages/017VolumioMemoryUsage.png>
- [57]
+ [58]
 File: ResultsAndAnalysis/VolumioServerTestImages/013VolumioForkRate.png Graphic
  file (type bmp)
 <ResultsAndAnalysis/VolumioServerTestImages/013VolumioForkRate.png>
@@ -1520,16 +1524,16 @@ File: ResultsAndAnalysis/VolumioServerTestImages/004VolumioCPUUsage.png Graphic
 File: ResultsAndAnalysis/VolumioServerTestImages/001VolumioCPUFreq.png Graphic 
 file (type bmp)
 <ResultsAndAnalysis/VolumioServerTestImages/001VolumioCPUFreq.png>
- [58]
+ [59]
 File: ResultsAndAnalysis/VolumioServerTestImages/002VolumioCPUFreqScaling.png G
 raphic file (type bmp)
 <ResultsAndAnalysis/VolumioServerTestImages/002VolumioCPUFreqScaling.png>
 File: ResultsAndAnalysis/VolumioServerTestImages/003VolumioCPUTemp.png Graphic 
 file (type bmp)
 <ResultsAndAnalysis/VolumioServerTestImages/003VolumioCPUTemp.png>
- [59] [60] [61] [62] [63] [64] [65]
-[66] [67] [68] [69] [70] [71] [72] [73] [74] [75] [76] [77] [78] [79]
-(./FYPProjectReport.bbl [80] [81]
+ [60] [61] [62] [63] [64] [65] [66]
+[67] [68] [69] [70] [71] [72] [73] [74] [75] [76] [77] [78] [79] [80]
+(./FYPProjectReport.bbl [81] [82]
 Underfull \hbox (badness 2495) in paragraph at lines 45--49
 []\TU/lmr/m/n/10.95 The Economist, “Having rescued recorded music, spo-
  []
@@ -1545,23 +1549,23 @@ Underfull \hbox (badness 3780) in paragraph at lines 45--49
 [][][][] [] [][][] [] [][][][][][][][] [] [][][][] [] [][] [] [][] []
  []
 
-[82
+[83
 
 ])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3239.
- [83]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 3239.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3247.
+ [84]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 3247.
  (./FYPProjectReport.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 3239.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 3239.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 3247.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 3247.
  ) 
 Here is how much of TeX's memory you used:
- 25975 strings out of 493007
- 499000 string characters out of 6136718
- 723524 words of memory out of 5000000
- 29584 multiletter control sequences out of 15000+600000
+ 25979 strings out of 493007
+ 499120 string characters out of 6136718
+ 723780 words of memory out of 5000000
+ 29588 multiletter control sequences out of 15000+600000
  536628 words of font info for 62 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  46i,8n,66p,10419b,547s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on FYPProjectReport.pdf (83 pages).
+Output written on FYPProjectReport.pdf (84 pages).
