@@ -80,7 +80,7 @@ audio/x-raw,rate=48000,channels=2,format=S16LE
 \end{lstlisting}
 
 These audio outputs are used to feed audio to the Snapcast server, to be send via
-the network to the SnapCast client devices. The MPD configuration can also be used
+the network to the Snapcast client devices. The MPD configuration can also be used
 on the Volumio server, as Volumio utilises MPD and it's configuration files for
 its audio playback.
 

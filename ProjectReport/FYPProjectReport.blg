@@ -14,45 +14,45 @@ Database file #1: References/biblio.bib
 Warning--empty journal in muso
 
 Done.
-You've used 32 entries,
+You've used 33 entries,
             4087 wiz_defined-function locations,
-            976 strings with 12045 characters,
-and the built_in function-call counts, 12157 in all, are:
-= -- 940
-> -- 193
+            980 strings with 12169 characters,
+and the built_in function-call counts, 12521 in all, are:
+= -- 969
+> -- 197
 < -- 0
-+ -- 94
-- -- 47
-* -- 480
-:= -- 2310
-add.period$ -- 64
-call.type$ -- 32
-change.case$ -- 32
++ -- 96
+- -- 48
+* -- 493
+:= -- 2380
+add.period$ -- 66
+call.type$ -- 33
+change.case$ -- 33
 chr.to.int$ -- 0
-cite$ -- 33
-duplicate$ -- 1011
-empty$ -- 1166
-format.name$ -- 52
-if$ -- 2628
+cite$ -- 34
+duplicate$ -- 1041
+empty$ -- 1202
+format.name$ -- 53
+if$ -- 2707
 int.to.chr$ -- 0
-int.to.str$ -- 32
-missing$ -- 223
-newline$ -- 175
-num.names$ -- 32
-pop$ -- 690
+int.to.str$ -- 33
+missing$ -- 230
+newline$ -- 180
+num.names$ -- 33
+pop$ -- 712
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 914
+skip$ -- 942
 stack$ -- 0
-substring$ -- 32
-swap$ -- 538
+substring$ -- 33
+swap$ -- 554
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 32
+type$ -- 33
 warning$ -- 1
-while$ -- 32
-width$ -- 34
-write$ -- 332
+while$ -- 33
+width$ -- 35
+write$ -- 342
 (There was 1 warning)

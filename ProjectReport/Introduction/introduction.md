@@ -15,4 +15,5 @@ stored, and streaming audio options to listeners.
 This project explores the idea of implementing a streaming server which allows
 users access a stored collection of audio, from any connected device, and to
 stream this audio to the nearest available client device. A solution must offer
-an accessible user experience, and importantly provide good quality playback.
+an accessible user experience, and importantly provide good quality playback,
+achieved through the combination of chosen software and hardware.

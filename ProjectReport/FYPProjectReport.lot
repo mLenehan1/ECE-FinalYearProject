@@ -5,51 +5,51 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {7.1}{\ignorespaces Required Experimental Equipment}}{15}{table.7.1}
+\contentsline {table}{\numberline {7.1}{\ignorespaces Required Experimental Equipment}}{17}{table.7.1}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {9.1}{\ignorespaces MPD Server and SnapClient Device Network Parameters}}{23}{table.9.1}
-\contentsline {table}{\numberline {9.2}{\ignorespaces MPD Server and SnapClient Device System Parameters}}{24}{table.9.2}
-\contentsline {table}{\numberline {9.3}{\ignorespaces MPD Server and SnapClient Device Sensor Parameters}}{25}{table.9.3}
-\contentsline {table}{\numberline {9.4}{\ignorespaces Mopidy Server and SnapClient Device Network Parameters}}{26}{table.9.4}
-\contentsline {table}{\numberline {9.5}{\ignorespaces Mopidy Server and SnapClient Device System Parameters}}{27}{table.9.5}
-\contentsline {table}{\numberline {9.6}{\ignorespaces Mopidy SnapClient Device Sensor Parameters}}{28}{table.9.6}
-\contentsline {table}{\numberline {9.7}{\ignorespaces Volumio Server and SnapClient Device Network Parameters}}{29}{table.9.7}
-\contentsline {table}{\numberline {9.8}{\ignorespaces Volumio Server and SnapClient Device System Parameters}}{30}{table.9.8}
-\contentsline {table}{\numberline {9.9}{\ignorespaces Volumio Server and SnapClient Device Sensor Parameters}}{31}{table.9.9}
-\contentsline {table}{\numberline {9.10}{\ignorespaces Server Device Beacon Bluetooth Distance Measurements}}{32}{table.9.10}
-\contentsline {table}{\numberline {9.11}{\ignorespaces "Client1" Device Beacon Bluetooth Distance Measurements}}{33}{table.9.11}
-\contentsline {table}{\numberline {9.12}{\ignorespaces "Client2" Device Beacon Bluetooth Distance Measurements}}{33}{table.9.12}
+\contentsline {table}{\numberline {9.1}{\ignorespaces MPD Server and SnapClient Device Network Parameters}}{25}{table.9.1}
+\contentsline {table}{\numberline {9.2}{\ignorespaces MPD Server and SnapClient Device System Parameters}}{26}{table.9.2}
+\contentsline {table}{\numberline {9.3}{\ignorespaces MPD Server and SnapClient Device Sensor Parameters}}{27}{table.9.3}
+\contentsline {table}{\numberline {9.4}{\ignorespaces Mopidy Server and SnapClient Device Network Parameters}}{28}{table.9.4}
+\contentsline {table}{\numberline {9.5}{\ignorespaces Mopidy Server and SnapClient Device System Parameters}}{29}{table.9.5}
+\contentsline {table}{\numberline {9.6}{\ignorespaces Mopidy SnapClient Device Sensor Parameters}}{30}{table.9.6}
+\contentsline {table}{\numberline {9.7}{\ignorespaces Volumio Server and SnapClient Device Network Parameters}}{31}{table.9.7}
+\contentsline {table}{\numberline {9.8}{\ignorespaces Volumio Server and SnapClient Device System Parameters}}{32}{table.9.8}
+\contentsline {table}{\numberline {9.9}{\ignorespaces Volumio Server and SnapClient Device Sensor Parameters}}{33}{table.9.9}
+\contentsline {table}{\numberline {9.10}{\ignorespaces Server Device Beacon Bluetooth Distance Measurements}}{34}{table.9.10}
+\contentsline {table}{\numberline {9.11}{\ignorespaces "Client1" Device Beacon Bluetooth Distance Measurements}}{35}{table.9.11}
+\contentsline {table}{\numberline {9.12}{\ignorespaces "Client2" Device Beacon Bluetooth Distance Measurements}}{35}{table.9.12}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {12.1}{\ignorespaces MPD SnapClient Device Disk Parameters}}{60}{table.12.1}
-\contentsline {table}{\numberline {12.2}{\ignorespaces MPD Server Device Disk Parameters}}{60}{table.12.2}
-\contentsline {table}{\numberline {12.3}{\ignorespaces MPD SnapClient Device Network Parameters}}{61}{table.12.3}
-\contentsline {table}{\numberline {12.4}{\ignorespaces MPD Server Device Network Parameters}}{62}{table.12.4}
-\contentsline {table}{\numberline {12.5}{\ignorespaces MPD SnapClient Device Process Parameters}}{62}{table.12.5}
-\contentsline {table}{\numberline {12.6}{\ignorespaces MPD Server Device Process Parameters}}{63}{table.12.6}
-\contentsline {table}{\numberline {12.7}{\ignorespaces MPD SnapClient Device System Parameters}}{63}{table.12.7}
-\contentsline {table}{\numberline {12.8}{\ignorespaces MPD Server Device System Parameters}}{64}{table.12.8}
-\contentsline {table}{\numberline {12.9}{\ignorespaces MPD SnapClient Device Sensor Parameters}}{64}{table.12.9}
-\contentsline {table}{\numberline {12.10}{\ignorespaces MPD Server Device Sensor Parameters}}{65}{table.12.10}
-\contentsline {table}{\numberline {12.11}{\ignorespaces Mopidy SnapClient Device Disk Parameters}}{65}{table.12.11}
-\contentsline {table}{\numberline {12.12}{\ignorespaces Mopidy Server Device Disk Parameters}}{66}{table.12.12}
-\contentsline {table}{\numberline {12.13}{\ignorespaces Mopidy SnapClient Device Network Parameters}}{67}{table.12.13}
-\contentsline {table}{\numberline {12.14}{\ignorespaces Mopidy Server Device Network Parameters}}{68}{table.12.14}
-\contentsline {table}{\numberline {12.15}{\ignorespaces Mopidy SnapClient Device Process Parameters}}{68}{table.12.15}
-\contentsline {table}{\numberline {12.16}{\ignorespaces Mopidy Server Device Process Parameters}}{69}{table.12.16}
-\contentsline {table}{\numberline {12.17}{\ignorespaces Mopidy SnapClient Device System Parameters}}{69}{table.12.17}
-\contentsline {table}{\numberline {12.18}{\ignorespaces Mopidy Server Device System Parameters}}{70}{table.12.18}
-\contentsline {table}{\numberline {12.19}{\ignorespaces Mopidy SnapClient Device Sensor Parameters}}{70}{table.12.19}
-\contentsline {table}{\numberline {12.20}{\ignorespaces Mopidy Server Device Sensor Parameters}}{71}{table.12.20}
-\contentsline {table}{\numberline {12.21}{\ignorespaces Volumio SnapClient Device Disk Parameters}}{71}{table.12.21}
-\contentsline {table}{\numberline {12.22}{\ignorespaces Volumio Server Device Disk Parameters}}{72}{table.12.22}
-\contentsline {table}{\numberline {12.23}{\ignorespaces Volumio SnapClient Device Network Parameters}}{73}{table.12.23}
-\contentsline {table}{\numberline {12.24}{\ignorespaces Volumio Server Device Network Parameters}}{74}{table.12.24}
-\contentsline {table}{\numberline {12.25}{\ignorespaces Volumio SnapClient Device Process Parameters}}{74}{table.12.25}
-\contentsline {table}{\numberline {12.26}{\ignorespaces Volumio Server Device Process Parameters}}{75}{table.12.26}
-\contentsline {table}{\numberline {12.27}{\ignorespaces Volumio SnapClient Device System Parameters}}{75}{table.12.27}
-\contentsline {table}{\numberline {12.28}{\ignorespaces Volumio Server Device System Parameters}}{76}{table.12.28}
-\contentsline {table}{\numberline {12.29}{\ignorespaces Volumio SnapClient Device Sensor Parameters}}{76}{table.12.29}
-\contentsline {table}{\numberline {12.30}{\ignorespaces Volumio Server Device Sensor Parameters}}{77}{table.12.30}
+\contentsline {table}{\numberline {12.1}{\ignorespaces MPD SnapClient Device Disk Parameters}}{62}{table.12.1}
+\contentsline {table}{\numberline {12.2}{\ignorespaces MPD Server Device Disk Parameters}}{62}{table.12.2}
+\contentsline {table}{\numberline {12.3}{\ignorespaces MPD SnapClient Device Network Parameters}}{63}{table.12.3}
+\contentsline {table}{\numberline {12.4}{\ignorespaces MPD Server Device Network Parameters}}{64}{table.12.4}
+\contentsline {table}{\numberline {12.5}{\ignorespaces MPD SnapClient Device Process Parameters}}{64}{table.12.5}
+\contentsline {table}{\numberline {12.6}{\ignorespaces MPD Server Device Process Parameters}}{65}{table.12.6}
+\contentsline {table}{\numberline {12.7}{\ignorespaces MPD SnapClient Device System Parameters}}{65}{table.12.7}
+\contentsline {table}{\numberline {12.8}{\ignorespaces MPD Server Device System Parameters}}{66}{table.12.8}
+\contentsline {table}{\numberline {12.9}{\ignorespaces MPD SnapClient Device Sensor Parameters}}{66}{table.12.9}
+\contentsline {table}{\numberline {12.10}{\ignorespaces MPD Server Device Sensor Parameters}}{67}{table.12.10}
+\contentsline {table}{\numberline {12.11}{\ignorespaces Mopidy SnapClient Device Disk Parameters}}{67}{table.12.11}
+\contentsline {table}{\numberline {12.12}{\ignorespaces Mopidy Server Device Disk Parameters}}{68}{table.12.12}
+\contentsline {table}{\numberline {12.13}{\ignorespaces Mopidy SnapClient Device Network Parameters}}{69}{table.12.13}
+\contentsline {table}{\numberline {12.14}{\ignorespaces Mopidy Server Device Network Parameters}}{70}{table.12.14}
+\contentsline {table}{\numberline {12.15}{\ignorespaces Mopidy SnapClient Device Process Parameters}}{70}{table.12.15}
+\contentsline {table}{\numberline {12.16}{\ignorespaces Mopidy Server Device Process Parameters}}{71}{table.12.16}
+\contentsline {table}{\numberline {12.17}{\ignorespaces Mopidy SnapClient Device System Parameters}}{71}{table.12.17}
+\contentsline {table}{\numberline {12.18}{\ignorespaces Mopidy Server Device System Parameters}}{72}{table.12.18}
+\contentsline {table}{\numberline {12.19}{\ignorespaces Mopidy SnapClient Device Sensor Parameters}}{72}{table.12.19}
+\contentsline {table}{\numberline {12.20}{\ignorespaces Mopidy Server Device Sensor Parameters}}{73}{table.12.20}
+\contentsline {table}{\numberline {12.21}{\ignorespaces Volumio SnapClient Device Disk Parameters}}{73}{table.12.21}
+\contentsline {table}{\numberline {12.22}{\ignorespaces Volumio Server Device Disk Parameters}}{74}{table.12.22}
+\contentsline {table}{\numberline {12.23}{\ignorespaces Volumio SnapClient Device Network Parameters}}{75}{table.12.23}
+\contentsline {table}{\numberline {12.24}{\ignorespaces Volumio Server Device Network Parameters}}{76}{table.12.24}
+\contentsline {table}{\numberline {12.25}{\ignorespaces Volumio SnapClient Device Process Parameters}}{76}{table.12.25}
+\contentsline {table}{\numberline {12.26}{\ignorespaces Volumio Server Device Process Parameters}}{77}{table.12.26}
+\contentsline {table}{\numberline {12.27}{\ignorespaces Volumio SnapClient Device System Parameters}}{77}{table.12.27}
+\contentsline {table}{\numberline {12.28}{\ignorespaces Volumio Server Device System Parameters}}{78}{table.12.28}
+\contentsline {table}{\numberline {12.29}{\ignorespaces Volumio SnapClient Device Sensor Parameters}}{78}{table.12.29}
+\contentsline {table}{\numberline {12.30}{\ignorespaces Volumio Server Device Sensor Parameters}}{79}{table.12.30}

@@ -14,7 +14,7 @@ from the application:
  \item "Beacon Type"
  \begin{itemize}
   \item Returns the type of bluetooth beacon being used, e.g. iBeacon,
-  Eddyston Beacon, and AltBeacon
+  Eddystone Beacon, and AltBeacon
  \end{itemize}
  \item "Beacon ID"
  \begin{itemize}

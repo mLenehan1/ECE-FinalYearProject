@@ -160,7 +160,8 @@ This project explores the idea of implementing a streaming server which
 allows users access a stored collection of audio, from any connected
 device, and to stream this audio to the nearest available client device.
 A solution must offer an accessible user experience, and importantly
-provide good quality playback.
+provide good quality playback, achieved through the combination of
+chosen software and hardware.
 
 \chapter{Background Literature
 Survey}\label{background-literature-survey}
@@ -361,15 +362,115 @@ requests to be performed from Android devices on API level 28 (Android 9
 \chapter{Concepts, Modelling, and
 Design}\label{concepts-modelling-and-design}
 
-\section{Design}\label{design}
+\section{Audio Server}\label{audio-server}
+
+The proposed design solution for the implementation of the system
+utilizes three Raspberry Pi 3 Model B+, each with a DAC for outputting
+high quality audio. The chosen audio server software runs on one device,
+alongside the streaming server, with the streaming clients running on
+the other devices.
 
 \begin{figure}[H]
 \includegraphics{ConceptsModellingDesign/floorplan.png}
 \centering
-\caption{Floor Plan, with Downstairs (Left), Upstairs (Right), Raspberry Pi's
-represented by 'O's}
+\caption{Floor Plan with Downstairs (Left), Upstairs (Right), and Raspberry Pi
+Locations (Represented by 'O's)}
 \label{floorplan}
 \end{figure}
+
+\section{Client Tracking}\label{client-tracking-1}
+
+Client tracking is implemented using a combination of Bluetooth Low
+Energy Beacons, and an accompanying Android application.
+
+\subsection{Beacons}\label{beacons}
+
+\subsection{Android Application}\label{android-application}
+
+The proposed Android application, built using Google's ``Flutter''
+framework, connects to the audio server, allowing for the control of
+volume parameters. This is achieved via the transmission of JSON encoded
+messages, as defined in the Snapcast JSON RPC API\cite{snaprpc}, via a
+TCP socket connection from the application to the server device, on port
+1705. Given an audio client device ID, which may be parsed from a server
+response message, the client devices volume can be adjusted, or muted
+from within the application. In order to create a JSON message in Dart,
+the language used by Flutter, a number of classes and constructors are
+required. The following is the Snapcast command for adjusting the volume
+of a connected client device.
+
+\lstset{
+    caption=Example Snapcast "Client.SetVolume" Request,
+    basicstyle=\footnotesize, frame=tb,
+    xleftmargin=.2\textwidth, xrightmargin=.2\textwidth
+}
+
+\begin{lstlisting}[language=Java]
+{"id":8,
+"jsonrpc":"2.0",
+"method":"Client.SetVolume",
+"params":
+    {"id":"00:21:6a:7d:74:fc",
+    "volume":{"muted":false,"percent":74}
+    }
+}
+\end{lstlisting}
+
+As both the ``params'' and ``volume'' fields have multiple arguments,
+they each require separate constructors, as follows:
+
+\lstset{
+    caption=Dart JSON "volume" Field Constructor,
+    basicstyle=\footnotesize, frame=tb,
+    xleftmargin=.2\textwidth, xrightmargin=.2\textwidth
+}
+
+\begin{lstlisting}[language=Java]
+JSONVolume(bool mute, int percent){
+    this.volume["muted"] = mute;
+    this.volume["percent"] = percent;
+}
+\end{lstlisting}
+
+\lstset{
+    caption=Dart JSON "params" Field Constructor,
+    basicstyle=\footnotesize, frame=tb,
+    xleftmargin=.2\textwidth, xrightmargin=.2\textwidth
+}
+
+\begin{lstlisting}[language=Java]
+JSONParams(String id, bool mute, int percent){
+    this.params["id"] = id;
+    this.params["volume"] = JSONVolume(mute,
+    percent).volume;
+}
+\end{lstlisting}
+
+Finally, the Dart equivalent of the JSON message can be constructed:
+
+\lstset{
+    caption=Dart JSON Client.SetVolume Constructor,
+    basicstyle=\footnotesize, frame=tb,
+    xleftmargin=.2\textwidth, xrightmargin=.2\textwidth
+}
+
+\begin{lstlisting}[language=Java]
+ClientVolume(String id, bool mute, int percent){
+    this.jsonMessage["id"] = 8;
+    this.jsonMessage["jsonrpc"] = "2.0";
+    this.jsonMessage["method"] = "Client.SetVolume";
+    this.jsonMessage["params"] = JSONParams(id, mute,
+    percent).params;
+    this.messageString = json.encode(this.jsonMessage)
+    + "\r\n";   // '\r\n' required for newline delimited
+            // JSON messages
+}
+\end{lstlisting}
+
+The encoded message can be transmit to the server using the
+``Socket.connect(IP, Port)'', and ``Socket.write(String)'' methods.
+
+\section{Extensibility}\label{extensibility}
 
 \chapter{Experimental Equipment and
 Procedures}\label{experimental-equipment-and-procedures}
@@ -523,7 +624,7 @@ from the application:
  \item "Beacon Type"
  \begin{itemize}
   \item Returns the type of bluetooth beacon being used, e.g. iBeacon,
-  Eddyston Beacon, and AltBeacon
+  Eddystone Beacon, and AltBeacon
  \end{itemize}
  \item "Beacon ID"
  \begin{itemize}
@@ -657,7 +758,7 @@ audio/x-raw,rate=48000,channels=2,format=S16LE
 \end{lstlisting}
 
 These audio outputs are used to feed audio to the Snapcast server, to be
-send via the network to the SnapCast client devices. The MPD
+send via the network to the Snapcast client devices. The MPD
 configuration can also be used on the Volumio server, as Volumio
 utilises MPD and it's configuration files for its audio playback.
 
@@ -706,7 +807,41 @@ using the AltBeacon protocol. These examples can be modified for the
 creation of AltBeacons with unique ID's, and allow for the calibration
 of these beacons.
 
+\subsection{Beacon Scanner
+Application}\label{beacon-scanner-application}
+
+The Beacon Scanner android application allows for the monitoring and
+ranging of bluetooth beacons from an android device\cite{beaconscan}.
+Utilising Bluetooth RSSI, the application estimates the distance from
+the Android device to the Bluetooth beacon. The device reports on beacon
+type, ID, RSSI, and Transmission power. These parameters allow for the
+identification and calibration of the beacon, along with the location
+determination for the client.
+
 \section{Client Tracking Testing}\label{client-tracking-testing}
+
+In order to determine the accuracy and reliability of a Bluetooth
+Beacon, specifically the AltBeacon protocol, for the purposes of
+distance measurements in client tracking applications, a number of
+readings must be taken, at multiple distances from the beacon. This will
+show how the measured distance value changes with an increase in
+physical distance from beacon to scanning device.
+
+Testing setup consists of three Raspberry Pi's, each running the
+Raspbian Stretch Light OS, with an AltBeacon with a unique ID. The
+AltBeacons must be calibrated, by taking the RSSI value at 1 meter from
+the beacon device. The value is added into byte 29 of the AltBeacon,
+allowing for the beacon to more accurately provide ranging information.
+An Android device running the ``Beacon Scanner'' application is used to
+measure the RSSI value, and in turn to calculate an approximate distance
+to the beacon.
+
+The distance results obtained from the execution of the testing steps
+outlined in Section \ref{expprocedure} must be utilised to create tables
+of physical distance, estimated distance, and the deviation of the
+estimate from the actual distance. As such, these tables may be used in
+the analysis of the accuracy of bluetooth beacons in location
+determination.
 
 \chapter{Results and Analysis}\label{results-and-analysis}
 
@@ -1491,7 +1626,7 @@ and System measurement values, the MPD server was chosen as the Server
 software to be used.
 
 \section{\texorpdfstring{Client Tracking
-\label{clienttrackresults}}{Client Tracking }}\label{client-tracking-1}
+\label{clienttrackresults}}{Client Tracking }}\label{client-tracking-2}
 
 The following tables are the outcome of the testing described in Section
 \ref{expprocedure}, Client Tracking Testing Procedure. The distance

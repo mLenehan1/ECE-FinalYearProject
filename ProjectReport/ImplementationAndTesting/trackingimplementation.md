@@ -20,4 +20,8 @@ AltBeacons with unique ID's, and allow for the calibration of these beacons.
 ### Beacon Scanner Application
 
 The Beacon Scanner android application allows for the monitoring and ranging of
-bluetooth beacons from an android device\cite{beaconscan}.
+bluetooth beacons from an android device\cite{beaconscan}. Utilising Bluetooth
+RSSI, the application estimates the distance from the Android device to the
+Bluetooth beacon. The device reports on beacon type, ID, RSSI, and Transmission
+power. These parameters allow for the identification and calibration of the
+beacon, along with the location determination for the client.

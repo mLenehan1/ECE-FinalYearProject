@@ -115,6 +115,12 @@ A.~Uddin~Afaz, R.~Arablouei, F.~de~Hoog, B.~Kusy, R.~Jurdak, and N.~Bergmann,
   \url{https://developer.android.com/guide/topics/connectivity/wifi-rtt}
 \BIBentrySTDinterwordspacing
 
+\bibitem{snaprpc}
+\BIBentryALTinterwordspacing
+J.~Pohl, ``Snapcasst json rpc control api,'' 2018. [Online]. Available:
+  \url{https://github.com/badaix/snapcast/blob/master/doc/json_rpc_api/v2_0_0.md}
+\BIBentrySTDinterwordspacing
+
 \bibitem{beaconscan}
 \BIBentryALTinterwordspacing
 N.~Bridoux, ``Beacon scanner,'' 2018. [Online]. Available:
