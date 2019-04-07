@@ -1527,4 +1527,111 @@ le (type bmp)
  [55]
 File: ResultsAndAnalysis/MopidyServerTestImages/002MopidyCPUFreqScaling.png Gra
 phic file (type bmp)
-<ResultsAndAnalysis/MopidyServerTestImages
+<ResultsAndAnalysis/MopidyServerTestImages/002MopidyCPUFreqScaling.png>
+File: ResultsAndAnalysis/MopidyServerTestImages/003MopidyCPUTemp.png Graphic fi
+le (type bmp)
+<ResultsAndAnalysis/MopidyServerTestImages/003MopidyCPUTemp.png>
+File: ResultsAndAnalysis/VolumioServerTestImages/005VolumioDiskIO.png Graphic f
+ile (type bmp)
+<ResultsAndAnalysis/VolumioServerTestImages/005VolumioDiskIO.png>
+ [56]
+File: ResultsAndAnalysis/VolumioServerTestImages/006VolumioDiskLatency.png Grap
+hic file (type bmp)
+<ResultsAndAnalysis/VolumioServerTestImages/006VolumioDiskLatency.png>
+File: ResultsAndAnalysis/VolumioServerTestImages/007VolumioDiskThroughput.png G
+raphic file (type bmp)
+<ResultsAndAnalysis/VolumioServerTestImages/007VolumioDiskThroughput.png>
+File: ResultsAndAnalysis/VolumioServerTestImages/009VolumioDiskUtilization.png 
+Graphic file (type bmp)
+<ResultsAndAnalysis/VolumioServerTestImages/009VolumioDiskUtilization.png>
+File: ResultsAndAnalysis/VolumioServerTestImages/012VolumioFirewallThroughput.p
+ng Graphic file (type bmp)
+<ResultsAndAnalysis/VolumioServerTestImages/012VolumioFirewallThroughput.png>
+ [57]
+File: ResultsAndAnalysis/VolumioServerTestImages/010VolumioEth0Errors.png Graph
+ic file (type bmp)
+<ResultsAndAnalysis/VolumioServerTestImages/010VolumioEth0Errors.png>
+File: ResultsAndAnalysis/VolumioServerTestImages/011VolumioEth0Traffic.png Grap
+hic file (type bmp)
+<ResultsAndAnalysis/VolumioServerTestImages/011VolumioEth0Traffic.png>
+File: ResultsAndAnalysis/VolumioServerTestImages/022VolumioWlan0Errors.png Grap
+hic file (type bmp)
+<ResultsAndAnalysis/VolumioServerTestImages/022VolumioWlan0Errors.png>
+
+[58]
+File: ResultsAndAnalysis/VolumioServerTestImages/023VolumioWlan0Traffic.png Gra
+phic file (type bmp)
+<ResultsAndAnalysis/VolumioServerTestImages/023VolumioWlan0Traffic.png>
+File: ResultsAndAnalysis/VolumioServerTestImages/018VolumioNetstat.png Graphic 
+file (type bmp)
+<ResultsAndAnalysis/VolumioServerTestImages/018VolumioNetstat.png>
+File: ResultsAndAnalysis/VolumioServerTestImages/020VolumioProcesses.png Graphi
+c file (type bmp)
+<ResultsAndAnalysis/VolumioServerTestImages/020VolumioProcesses.png>
+ [59]
+File: ResultsAndAnalysis/VolumioServerTestImages/021VolumioProcessPriority.png 
+Graphic file (type bmp)
+<ResultsAndAnalysis/VolumioServerTestImages/021VolumioProcessPriority.png>
+File: ResultsAndAnalysis/VolumioServerTestImages/019VolumioNoOfThreads.png Grap
+hic file (type bmp)
+<ResultsAndAnalysis/VolumioServerTestImages/019VolumioNoOfThreads.png>
+File: ResultsAndAnalysis/VolumioServerTestImages/016VolumioLoadAverage.png Grap
+hic file (type bmp)
+<ResultsAndAnalysis/VolumioServerTestImages/016VolumioLoadAverage.png>
+ [60]
+File: ResultsAndAnalysis/VolumioServerTestImages/014VolumioIndividualInterrupts
+.png Graphic file (type bmp)
+<ResultsAndAnalysis/VolumioServerTestImages/014VolumioIndividualInterrupts.png>
+
+File: ResultsAndAnalysis/VolumioServerTestImages/015VolumioInterruptsAndContext
+Switches.png Graphic file (type bmp)
+<ResultsAndAnalysis/VolumioServerTestImages/015VolumioInterruptsAndContextSwitc
+hes.png>
+File: ResultsAndAnalysis/VolumioServerTestImages/017VolumioMemoryUsage.png Grap
+hic file (type bmp)
+<ResultsAndAnalysis/VolumioServerTestImages/017VolumioMemoryUsage.png>
+ [61]
+File: ResultsAndAnalysis/VolumioServerTestImages/013VolumioForkRate.png Graphic
+ file (type bmp)
+<ResultsAndAnalysis/VolumioServerTestImages/013VolumioForkRate.png>
+File: ResultsAndAnalysis/VolumioServerTestImages/004VolumioCPUUsage.png Graphic
+ file (type bmp)
+<ResultsAndAnalysis/VolumioServerTestImages/004VolumioCPUUsage.png>
+File: ResultsAndAnalysis/VolumioServerTestImages/001VolumioCPUFreq.png Graphic 
+file (type bmp)
+<ResultsAndAnalysis/VolumioServerTestImages/001VolumioCPUFreq.png>
+ [62]
+File: ResultsAndAnalysis/VolumioServerTestImages/002VolumioCPUFreqScaling.png G
+raphic file (type bmp)
+<ResultsAndAnalysis/VolumioServerTestImages/002VolumioCPUFreqScaling.png>
+File: ResultsAndAnalysis/VolumioServerTestImages/003VolumioCPUTemp.png Graphic 
+file (type bmp)
+<ResultsAndAnalysis/VolumioServerTestImages/003VolumioCPUTemp.png>
+ [63] [64] [65] [66] [67] [68] [69] [70] [71] [72]
+[73] [74] [75] [76] [77] [78] [79] (./FYPProjectReport.bbl [80] [81] [82
+
+]
+Underfull \hbox (badness 1755) in paragraph at lines 121--125
+\TU/lmr/m/n/10.95 ample code,” 2018. [Online]. Available: []$[][][][][] [] [] [
+] [][][][][][][][] [] [][][] []
+ []
+
+[83])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 4001.
+ [84]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 4001.
+ (./FYPProjectReport.aux)
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 4001.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 4001.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 4001.
+ ) 
+Here is how much of TeX's memory you used:
+ 27192 strings out of 493007
+ 517002 string characters out of 6136718
+ 768666 words of memory out of 5000000
+ 30779 multiletter control sequences out of 15000+600000
+ 539586 words of font info for 77 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 46i,8n,66p,10419b,1771s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on FYPProjectReport.pdf (84 pages).
