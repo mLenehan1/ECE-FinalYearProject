@@ -1,4 +1,4 @@
-## Recommendations
+# Recommendations
 
 The currently proposed implementation can communicate with the Snapcast server,
 and perform ranging requests with the BLE beacons for location determination.

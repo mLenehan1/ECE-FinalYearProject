@@ -91,9 +91,9 @@
 
 I would like to thank my project supervisor, Dr.~Martin Collier. He
 provided guidance and assistance with all aspects of this project, and
-his knowledge and insight on the topic was invaluable. I would also like
-to thank Dr.~Gabriel-Miro Muntean, who acted as the second assessor for
-this project for his insight into testing practices, which gave greater
+his knowledge on the topic was invaluable. I would also like to thank
+Dr.~Gabriel-Miro Muntean, who acted as the second assessor for this
+project for his insight into testing practices, which gave greater
 clarity to the overall project results.
 
 \begingroup
@@ -133,25 +133,19 @@ Spotify, Tidal, and Google Play Music, there is a need for a high
 quality audio streaming option for locally stored audio. Open-source
 audio server softwares can provide this functionality, although they are
 intended for use in ``headless'' audio setups, controlled over the
-network, outputting their audio locally.
-
-This project aims to implement an audio server solution which can stream
-music over the network to a number of client devices, at high quality,
-with minimal audio artefact's. Audio playback across the client devices
-must be synchronised in order to provide a satisfactory user experience.
-
-Open-source audio streaming software ``Snapcast'' is used in order to
-implement multi-output synchronised audio playback across a number of
-network connected client devices.
-
-In addition to synchronised audio playback, listener tracking will be
-implemented in such a way as to allow a user traverse a space, such as
-their home, with the audio level altered as the listener approaches or
-distances themselves from the client device.
-
-Finally, the system volume control and listener tracking will be
-combined in a cross-platform application, built using the ``Flutter''
-framework.
+network, outputting their audio locally. This project aims to implement
+an audio server solution which can stream music over the network to a
+number of client devices, at high quality, with minimal audio artefacts.
+Audio playback across the client devices must be synchronised in order
+to provide a satisfactory user experience. Open-source audio streaming
+software ``Snapcast'' is used in order to implement multi-output
+synchronised audio playback across a number of network connected client
+devices. In addition to synchronised audio playback, listener tracking
+will be implemented in such a way as to allow a user traverse a space,
+such as their home, with the audio level altered as the listener
+approaches or distances themselves from the client device. Finally, the
+system volume control and listener tracking will be combined in a
+cross-platform application, built using the ``Flutter'' framework.
 
 \chapter{Introduction}\label{introduction}
 
@@ -178,7 +172,7 @@ provide good quality playback, achieved through the combination of
 chosen software and hardware.
 
 Listener tracking implementations must be investigated. These
-implementations tend to include Wi-Fi, or Bluetooth tracking, through
+implementations tend to include Wi-Fi or Bluetooth tracking through
 either signal strength, or Round Trip Time algorithms. More complex
 examples exist of implementations using multiple antenna arrays to give
 directionality and distance, however, these implementations tend to be
@@ -2001,14 +1995,11 @@ privacy policies of applications and services, in order to correctly
 inform users of the data being accessed, and the storage and usage
 conditions of this data.
 
-\chapter{Conclusions and
-Recommendations}\label{conclusions-and-recommendations}
-
-\section{Conclusions}\label{conclusions}
+\chapter{Conclusions}\label{conclusions}
 
 Following the completion of the required testing and analysis for the
 audio server software, it can be concluded that, although there is
-little difference between the audio server software, with each having
+little difference between the audio server software with each having
 advantageous results over the others, the MPD software is the best for
 system longevity. The software does not cause any significant heat
 increase within the device while streaming, lowering the risk of wear to
@@ -2016,11 +2007,11 @@ the device over prolonged use periods. Mopidy has the advantage of
 having greater extensibility, allowing for not only the playback of
 locally stored audio, but also the playback of streamed audio from
 services such as Spotify. While Volumio is an excellent solution for
-``headless'' audio systems, as it is intended to be used, for the
-purposes of this project, it essentially seen as an MPD server, with a
+``headless'' audio systems as it is intended to be used, for the
+purposes of this project, it essentially seen as an MPD server with a
 graphical user interface. For these reasons, and due to the ease of use
-and configuration MPD was chosen as the optimal solution for an audio
-server software, however, with further configuration, the Mopidy server
+and configuration, MPD was chosen as the optimal solution for an audio
+server software. However, with further configuration, the Mopidy server
 software could provide greater options for the user.
 
 Testing of the listener tracking using BLE beacons shows that an
@@ -2029,16 +2020,16 @@ being within an accuracy of 1 meter. These measurements, combined with
 the measurements being taken from multiple BLE beacons ranging
 estimates, can provide a means for more accurately positioning a user
 within the space. While the AltBeacon protocol is used in this project,
-Google's Eddystone beacon protocol could also be used for ranging,
-however, as the Flutter framework is being used, and there is no support
-for this protocol. This support could be added, but would require
-significant experience in converting Java code implementations to Dart
-code implementations.
+Google's Eddystone beacon protocol could also be used for ranging.
+However, as the Flutter framework is being used, there is no support for
+this protocol. This support could be added but would require significant
+experience in converting Java code implementations to Dart code
+implementations.
 
 While both the JSON messaging from the Android device to the Snapcast
 server, and the BLE beacon ranging requests could be implemented, the
 code could not be combined in order to change volume based on listener
-location. This could be due to a number of issue, including
+location. This could be due to a number of issues, including
 incompatibilities between the Dart libraries and Flutter plugins being
 used. As Flutter is a relatively new framework, currently in version
 1.2, many of the open-source, community created plugins have issues
@@ -2048,7 +2039,7 @@ language used for cross-platform code in Flutter. Java code could be
 used in order to implement ranging and JSON messaging, however, this
 would not allow for the code to be used on the iOS platform.
 
-\section{Recommendations}\label{recommendations}
+\chapter{Recommendations}\label{recommendations}
 
 The currently proposed implementation can communicate with the Snapcast
 server, and perform ranging requests with the BLE beacons for location

@@ -21,7 +21,7 @@ an accessible user experience, and importantly provide good quality playback,
 achieved through the combination of chosen software and hardware.
 
 Listener tracking implementations must be investigated. These implementations
-tend to include Wi-Fi, or Bluetooth tracking, through either signal strength, or
+tend to include Wi-Fi or Bluetooth tracking through either signal strength, or
 Round Trip Time algorithms. More complex examples exist of implementations using
 multiple antenna arrays to give directionality and distance, however, these
 implementations tend to be cost prohibitive. The advantages and disadvantages of
