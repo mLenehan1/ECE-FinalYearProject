@@ -20,3 +20,7 @@ M.A.L.P can provide control of the playback features of the audio server
 softwares\cite{mpdroid}\cite{malp}. As communication with the audio server is
 done via TCP sockets, playback controls could be added using a similar
 implementation as the JSON messaging used for the Snapcast commands.
+
+These recommendations, if implemented within the current system, would allow for
+greater user control, and improve the accuracy and usability of the
+application.
