@@ -3,19 +3,19 @@
 Another aspect of the project is the listener tracking and audio routing. There are
 multiple protocols which may be used in order to determine location of a mobile
 device. Bluetooth "Beacons" or Access Points are used, sending a packet to the device,
-the signal strength may be used to calculation and approximate distance\cite{Park15}.
+the signal strength may be used to calculate and approximate distance\cite{Park15}.
 Using filtering techniques, distances may be calculated, using Bluetooth, to an
 accuracy of approximately 1.8 meters\cite{Park15}.
 
 Location using WiFi may provide greater accuracy, however requires specialised
 hardware\cite{Gjengset14}. The 802.11AC WiFi standard allows for the use of Beamforming,
 in which multiple antennas transmit at once, allowing for the targeted transmission of
-data\cite{Heejung14}. Using Angle-of-Arrival (AoA), and Time-of-Flight (ToF), and Multiple
+data\cite{Heejung14}. Using Angle-of-Arrival (AoA), Time-of-Flight (ToF), and Multiple
 Signal Classification (MUSIC) algorithms, the distance and direction from
 the Access Point may be determined \cite{Afaz18}. The operations which must be
 performed are complex, and dependent on the hardware being used. As such,
-less complex solutions, such as RSSI, may be implemented, however there is
-also a reduction in accuracy.
+less complex solutions, such as RSSI, may be implemented, however, with these
+solutions comes a reduction in accuracy.
 
 ### Bluetooth Beacons
 

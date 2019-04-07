@@ -1,4 +1,4 @@
-# Acknowledgmenets
+# Acknowledgements
 
 I would like to thank my project supervisor, Dr. Martin Collier. He provided
 guidance and assistance with all aspects of this project, and his knowledge and

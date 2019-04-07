@@ -67,8 +67,9 @@ PulseAudio, ``Pulseaudio,'' 2014. [Online]. Available:
 
 \bibitem{MPD18}
 \BIBentryALTinterwordspacing
-T.~M. P.~D. Project", ``Music player daemon 0.21.4 documentation,'' 2018.
-  [Online]. Available: \url{https://www.musicpd.org/doc/}
+{The Music Player Daemon Project}, ``Music player daemon 0.21.4
+  documentation,'' 2018. [Online]. Available:
+  \url{https://www.musicpd.org/doc/}
 \BIBentrySTDinterwordspacing
 
 \bibitem{Volumio18}
@@ -88,8 +89,8 @@ J.~Gjengset, J.~Xiong, G.~McPhilips, and K.~Jamieson, ``Phaser: Enabling phased
   University}, 2014.
 
 \bibitem{Heejung14}
-K.~T. Ye~Heejung, ``Beamforming transmission in ieee 802.1ac under time-varying
-  channels,'' \emph{The Scientific World Journal}, 2014.
+Y.~Heejung and K.~Taejoon, ``Beamforming transmission in ieee 802.1ac under
+  time-varying channels,'' \emph{The Scientific World Journal}, 2014.
 
 \bibitem{Afaz18}
 A.~Uddin~Afaz, R.~Arablouei, F.~de~Hoog, B.~Kusy, R.~Jurdak, and N.~Bergmann,
@@ -263,6 +264,18 @@ W.~Ashford, ``Researchers raise privacy concerns about bluetooth low energy
 N.~Dunne, ``Proximity marketing: Often creepy, but it doesn't have to be,''
   2017. [Online]. Available:
   \url{https://www.digitalethics.org/essays/proximity-marketing-often-creepy-it-doesnt-have-be}
+\BIBentrySTDinterwordspacing
+
+\bibitem{mpdroid}
+\BIBentryALTinterwordspacing
+A.~Barisain-Monrose, ``Mpdroid a modern mpd client for android,'' 2018.
+  [Online]. Available: \url{https://github.com/abarisain/dmix}
+\BIBentrySTDinterwordspacing
+
+\bibitem{malp}
+\BIBentryALTinterwordspacing
+F.~Lutkes, ``malp,'' 2019. [Online]. Available:
+  \url{https://gitlab.com/gateship-one/malp}
 \BIBentrySTDinterwordspacing
 
 \end{thebibliography}

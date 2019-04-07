@@ -1,6 +1,6 @@
 ## Experimental Equipment Requirements
 
-The following hardware equipment is required for testing of both the audio
+The following hardware equipment is required for the testing of both the audio
 server software and the listener tracking implementations:
 
 \begin{table}[H]
@@ -32,8 +32,8 @@ In order to follow the testing steps outlined below in Section
 \ref{servertesting}, three Raspberry Pi Model 3 B+ are required, along with
 three T5989DC AC/DC Power Supplies, three SanDisk Industrial 8GB Class 10
 MicroSD cards, two Adafruit I2S Audio Bonnets, and two audio amplifier/speaker
-devices for audio output- This will allow for the client server streaming
-implementation between two Rasperry Pi's, with the third utilised for monitoring
+devices for audio output. This will allow for the client server streaming
+implementation between two Raspberry Pi's, with the third utilised for monitoring
 the devices used for streaming.
 
 ### Listener Tracking Equipment Requirements

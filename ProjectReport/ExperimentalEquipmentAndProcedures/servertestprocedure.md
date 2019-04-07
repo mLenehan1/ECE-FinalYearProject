@@ -2,9 +2,9 @@
 
 The testing steps outlined below will initiate playback of the available audio
 files from the audio server. Audio will be played for a total of six hours,
-divided amongst the three available audio formats, wave, FLAC, and MP3. As
+divided amongst the three available audio formats, WAV, FLAC, and MP3. As
 shown below, the three available albums are "Hardwired To Self Destruct" by
-Metallica, in wave format, "Superfuzz Bigmuff" by Mudhoney in FLAC format, and
+Metallica, in WAV format, "Superfuzz Bigmuff" by Mudhoney in FLAC format, and
 "Sonic Highways" by Foo Fighters in MP3.
 
 The Music Player Client "mpc" is used to control playback on each of the audio
@@ -60,10 +60,10 @@ comparison of the chosen audio server softwares.
      \item 04 16 * * * mpc stop \&\& mpc clear \&\& mpc repeat off
    \end{itemize}
   \end{itemize}
-  \item Once testing is complete of all available audio formats, replace the audio
+  \item Once testing of all available audio formats is complete, replace the audio
    server software - "MPD" - with the "Mopidy" audio server software. Repeat step
    one for the "mopidy" server software.
-  \item Once testing is complete of all available audio formats, replace the audio
+  \item Once testing of all available audio formats is complete, replace the audio
    server software - "Mopidy" - with the "Volumio" audio server software. Repeat
    step one for the "Volumio" server software.
   \item Record the data output from Munin, available in the browser from <Munin

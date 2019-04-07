@@ -12,7 +12,7 @@ software will be to stream media from the server system to the client system.
 This functionality exists in these open-source software options, but requires
 modifications to be made to configuration files in order to be implemented.
 
-Audio software PulseAudio may also be utilised, as it is often found on Linux
+Audio software PulseAudio may also be utilised as it is often found on Linux
 based systems. PulseAudio is a sound server which routes audio from the running
 application to the selected output device. On Linux systems, this is used to
 send audio output to the system speakers, or connected USB devices. However, the
@@ -32,8 +32,8 @@ streaming\cite{MPD18}.
 ### Mopidy
 
 Mopidy is a server-side audio application, written in python, which extends the
-functionality of MPD. It is availbale on Debian based Linux platforms, such
-as Raspbian, via the standard "apt" package manager respositories. In it's
+functionality of MPD. It is available on Debian based Linux platforms, such
+as Raspbian, via the standard "apt" package manager repositories. In its
 default configuration, Mopidy acts as a local media server, based on MPD. The
 advantage of Mopidy however, lies in it's extensibility via available
 "Extensions". These extensions include Spotify connectivity, allowing users not

@@ -87,7 +87,7 @@
 \listoftables
 \listoffigures
 %\end{document}
-\chapter{Acknowledgmenets}\label{acknowledgmenets}
+\chapter{Acknowledgements}\label{acknowledgements}
 
 I would like to thank my project supervisor, Dr.~Martin Collier. He
 provided guidance and assistance with all aspects of this project, and
@@ -150,11 +150,13 @@ stored audio on a so-called ``Headless'' system, whereby the server
 software is controlled remotely by the user.
 
 In recent years, a movement away from locally stored audio solutions has
-taken place. Subscription based audio streaming services such as Spotify
-exist to allow users access audio which they have no access to physical
-copies of. While this trend exists, an optimal server software solution
-would serve both locally stored, and streaming audio options to
-listeners.
+taken place\cite{SpotPay18}. Subscription based audio streaming services
+such as Spotify exist to allow users access audio which they have no
+access to physical copies of. While this trend exists, an optimal server
+software solution would serve both locally stored, and streaming audio
+options to listeners. Offering both of these options allows for the user
+to have the choice of configuring a database of their own audio files,
+or streaming from a preconfigured streaming service.
 
 This project explores the idea of implementing a streaming server which
 allows users access a stored collection of audio, from any connected
@@ -162,6 +164,21 @@ device, and to stream this audio to the nearest available client device.
 A solution must offer an accessible user experience, and importantly
 provide good quality playback, achieved through the combination of
 chosen software and hardware.
+
+Listener tracking implementations must be investigated. These
+implementations tend to include Wi-Fi, or Bluetooth tracking, through
+either signal strength, or Round Trip Time algorithms. More complex
+examples exist of implementations using multiple antenna arrays to give
+directionality and distance, however, these implementations tend to be
+cost prohibitive. The advantages and disadvantages of these
+implementations will be discussed, with an option chosen on its merits
+and availability.
+
+Following the investigation into the available solutions, a model must
+be proposed with specifics given for the audio streaming, listener
+tracking, and Android application implementations. Testing procedures of
+the audio server software and listener tracking must be given, with all
+results recorded and analysed.
 
 \chapter{Background Literature
 Survey}\label{background-literature-survey}
@@ -174,7 +191,7 @@ There are a number of Linux based embedded systems which may be
 configured to act as an audio streaming server with the appropriate
 software. Commonly used systems include the Raspberry Pi 3 Model B+,
 BeagleBone Black, and ASUS Tinker Board. There are differences between
-these development platforms which allow them more or less suitability
+these development platforms which allow them greater or less suitability
 for the purposes of this project.
 
 The BeagleBone Black (BBB) is a low cost platform, with compatibility
@@ -201,7 +218,7 @@ protocol\cite{Tinker18}.
 \begin{figure}[H]
 \includegraphics{BackgroundLitSurvey/AsusTB.jpeg}
 \centering
-\caption{Asus TinkerBoard}\cite{Tinker18}
+\caption{Asus Tinker Board}\cite{Tinker18}
 \label{AsusTBFig}
 \end{figure}
 
@@ -220,7 +237,7 @@ its GPIO\cite{RPI18}.
 
 Each of the aforementioned options offers different levels of
 performance at different price points. The BeagleBone Black is both the
-cheapest and least powerful option. The ASUS TinkerBoard is the most
+cheapest and least powerful option. The ASUS Tinker Board is the most
 powerful and most expensive option, while the Raspberry Pi offers
 comparatively high performance at a mid price. The benefits and costs of
 these Single Board Computers must be compared in order to choose that
@@ -273,7 +290,7 @@ system to the client system. This functionality exists in these
 open-source software options, but requires modifications to be made to
 configuration files in order to be implemented.
 
-Audio software PulseAudio may also be utilised, as it is often found on
+Audio software PulseAudio may also be utilised as it is often found on
 Linux based systems. PulseAudio is a sound server which routes audio
 from the running application to the selected output device. On Linux
 systems, this is used to send audio output to the system speakers, or
@@ -293,13 +310,13 @@ both FIFO, and HTTPD streaming\cite{MPD18}.
 \subsection{Mopidy}\label{mopidy}
 
 Mopidy is a server-side audio application, written in python, which
-extends the functionality of MPD. It is availbale on Debian based Linux
+extends the functionality of MPD. It is available on Debian based Linux
 platforms, such as Raspbian, via the standard ``apt'' package manager
-respositories. In it's default configuration, Mopidy acts as a local
-media server, based on MPD. The advantage of Mopidy however, lies in
-it's extensibility via available ``Extensions''. These extensions
-include Spotify connectivity, allowing users not only access to locally
-stored audio files, but also to streaming audio.
+repositories. In its default configuration, Mopidy acts as a local media
+server, based on MPD. The advantage of Mopidy however, lies in it's
+extensibility via available ``Extensions''. These extensions include
+Spotify connectivity, allowing users not only access to locally stored
+audio files, but also to streaming audio.
 
 \subsection{Volumio}\label{volumio}
 
@@ -326,7 +343,7 @@ Another aspect of the project is the listener tracking and audio
 routing. There are multiple protocols which may be used in order to
 determine location of a mobile device. Bluetooth ``Beacons'' or Access
 Points are used, sending a packet to the device, the signal strength may
-be used to calculation and approximate distance\cite{Park15}. Using
+be used to calculate and approximate distance\cite{Park15}. Using
 filtering techniques, distances may be calculated, using Bluetooth, to
 an accuracy of approximately 1.8 meters\cite{Park15}.
 
@@ -334,12 +351,12 @@ Location using WiFi may provide greater accuracy, however requires
 specialised hardware\cite{Gjengset14}. The 802.11AC WiFi standard allows
 for the use of Beamforming, in which multiple antennas transmit at once,
 allowing for the targeted transmission of data\cite{Heejung14}. Using
-Angle-of-Arrival (AoA), and Time-of-Flight (ToF), and Multiple Signal
+Angle-of-Arrival (AoA), Time-of-Flight (ToF), and Multiple Signal
 Classification (MUSIC) algorithms, the distance and direction from the
 Access Point may be determined \cite{Afaz18}. The operations which must
 be performed are complex, and dependent on the hardware being used. As
-such, less complex solutions, such as RSSI, may be implemented, however
-there is also a reduction in accuracy.
+such, less complex solutions, such as RSSI, may be implemented, however,
+with these solutions comes a reduction in accuracy.
 
 \subsection{Bluetooth Beacons}\label{bluetooth-beacons}
 
@@ -586,7 +603,7 @@ Procedures}\label{experimental-equipment-and-procedures}
 \section{Experimental Equipment
 Requirements}\label{experimental-equipment-requirements}
 
-The following hardware equipment is required for testing of both the
+The following hardware equipment is required for the testing of both the
 audio server software and the listener tracking implementations:
 
 \begin{table}[H]
@@ -619,8 +636,8 @@ In order to follow the testing steps outlined below in Section
 \ref{servertesting}, three Raspberry Pi Model 3 B+ are required, along
 with three T5989DC AC/DC Power Supplies, three SanDisk Industrial 8GB
 Class 10 MicroSD cards, two Adafruit I2S Audio Bonnets, and two audio
-amplifier/speaker devices for audio output- This will allow for the
-client server streaming implementation between two Rasperry Pi's, with
+amplifier/speaker devices for audio output. This will allow for the
+client server streaming implementation between two Raspberry Pi's, with
 the third utilised for monitoring the devices used for streaming.
 
 \subsection{Listener Tracking Equipment
@@ -641,11 +658,10 @@ Android device running the Bluetooth Beacon detection application.
 
 The testing steps outlined below will initiate playback of the available
 audio files from the audio server. Audio will be played for a total of
-six hours, divided amongst the three available audio formats, wave,
-FLAC, and MP3. As shown below, the three available albums are
-``Hardwired To Self Destruct'' by Metallica, in wave format, ``Superfuzz
-Bigmuff'' by Mudhoney in FLAC format, and ``Sonic Highways'' by Foo
-Fighters in MP3.
+six hours, divided amongst the three available audio formats, WAV, FLAC,
+and MP3. As shown below, the three available albums are ``Hardwired To
+Self Destruct'' by Metallica, in WAV format, ``Superfuzz Bigmuff'' by
+Mudhoney in FLAC format, and ``Sonic Highways'' by Foo Fighters in MP3.
 
 The Music Player Client ``mpc'' is used to control playback on each of
 the audio server softwares. The following mpc commands are used for
@@ -700,10 +716,10 @@ for the comparison of the chosen audio server softwares.
      \item 04 16 * * * mpc stop \&\& mpc clear \&\& mpc repeat off
    \end{itemize}
   \end{itemize}
-  \item Once testing is complete of all available audio formats, replace the audio
+  \item Once testing of all available audio formats is complete, replace the audio
    server software - "MPD" - with the "Mopidy" audio server software. Repeat step
    one for the "mopidy" server software.
-  \item Once testing is complete of all available audio formats, replace the audio
+  \item Once testing of all available audio formats is complete, replace the audio
    server software - "Mopidy" - with the "Volumio" audio server software. Repeat
    step one for the "Volumio" server software.
   \item Record the data output from Munin, available in the browser from <Munin
@@ -1975,7 +1991,72 @@ Recommendations}\label{conclusions-and-recommendations}
 
 \section{Conclusions}\label{conclusions}
 
+Following the completion of the required testing and analysis for the
+audio server software, it can be concluded that, although there is
+little difference between the audio server software, with each having
+advantageous results over the others, the MPD software is the best for
+system longevity. The software does not cause any significant heat
+increase within the device while streaming, lowering the risk of wear to
+the device over prolonged use periods. Mopidy has the advantage of
+having greater extensibility, allowing for not only the playback of
+locally stored audio, but also the playback of streamed audio from
+services such as Spotify. While Volumio is an excellent solution for
+``headless'' audio systems, as it is intended to be used, for the
+purposes of this project, it essentially seen as an MPD server, with a
+graphical user interface. For these reasons, and due to the ease of use
+and configuration MPD was chosen as the optimal solution for an audio
+server software, however, with further configuration, the Mopidy server
+software could provide greater options for the user.
+
+Testing of the listener tracking using BLE beacons shows that an
+accuracy of within 2 meters may be achieved, with most measured values
+being within an accuracy of 1 meter. These measurements, combined with
+the measurements being taken from multiple BLE beacons ranging
+estimates, can provide a means for more accurately positioning a user
+within the space. While the AltBeacon protocol is used in this project,
+Google's Eddystone beacon protocol could also be used for ranging,
+however, as the Flutter framework is being used, and there is no support
+for this protocol. This support could be added, but would require
+significant experience in converting Java code implementations to Dart
+code implementations.
+
+While both the JSON messaging from the Android device to the Snapcast
+server, and the BLE beacon ranging requests could be implemented, the
+code could not be combined in order to change volume based on listener
+location. This could be due to a number of issue, including
+incompatibilities between the Dart libraries and Flutter plugins being
+used. As Flutter is a relatively new framework, currently in version
+1.2, many of the open-source, community created plugins have issues
+which may not have been documented at this time. The issues could also
+be due to inexperience in using the Dart language, which is the primary
+language used for cross-platform code in Flutter. Java code could be
+used in order to implement ranging and JSON messaging, however, this
+would not allow for the code to be used on the iOS platform.
+
 \section{Recommendations}\label{recommendations}
+
+The currently proposed implementation can communicate with the Snapcast
+server, and perform ranging requests with the BLE beacons for location
+determination. Further testing could allow for the combination of these
+functionalities. With both code implementations combined in the same
+application, audio volume on the client devices could be automatically
+determined via the listeners location.
+
+With the introduction of 802.11mc access points, and Android Pie, the
+Android Wi-Fi Round Trip Time implementation could be used for more
+accurate location determination. If the embedded linux platforms used
+for the client and server devices had support for this 802.11mc
+protocol, the same server software implementation could be used, with
+RTT ranging used in the place of Bluetooth ranging.
+
+The proposed implementation tackles the issues of listener tracking, and
+high quality audio streaming, however, it does not focus on implementing
+audio playback control from within the application. Applications such as
+MPDroid, and M.A.L.P can provide control of the playback features of the
+audio server softwares\cite{mpdroid}\cite{malp}. As communication with
+the audio server is done via TCP sockets, playback controls could be
+added using a similar implementation as the JSON messaging used for the
+Snapcast commands.
 
 \chapter{\texorpdfstring{Appendix
 \label{Appendix}}{Appendix }}\label{appendix}

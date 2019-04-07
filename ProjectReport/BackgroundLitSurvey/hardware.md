@@ -6,7 +6,7 @@ There are a number of Linux based embedded systems which may be configured to
 act as an audio streaming server with the appropriate software. Commonly used
 systems include the Raspberry Pi 3 Model B+, BeagleBone Black, and ASUS Tinker
 Board. There are differences between these development platforms which allow
-them more or less suitability for the purposes of this project.
+them greater or less suitability for the purposes of this project.
 
 The BeagleBone Black (BBB) is a low cost platform, with compatibility for many Linux
 distributions. The device has on board flash memory, Ethernet and HDMI outputs.
@@ -29,7 +29,7 @@ protocol\cite{Tinker18}.
 \begin{figure}[H]
 \includegraphics{BackgroundLitSurvey/AsusTB.jpeg}
 \centering
-\caption{Asus TinkerBoard}\cite{Tinker18}
+\caption{Asus Tinker Board}\cite{Tinker18}
 \label{AsusTBFig}
 \end{figure}
 
@@ -47,7 +47,7 @@ board supports the $I^2S$ protocol, with outputs on its GPIO\cite{RPI18}.
 
 Each of the aforementioned options offers different levels of performance
 at different price points. The BeagleBone Black is both the cheapest and
-least powerful option. The ASUS TinkerBoard is the most powerful and most
+least powerful option. The ASUS Tinker Board is the most powerful and most
 expensive option, while the Raspberry Pi offers comparatively high performance
 at a mid price. The benefits and costs of these Single Board Computers must
 be compared in order to choose that which is most appropriate for the
