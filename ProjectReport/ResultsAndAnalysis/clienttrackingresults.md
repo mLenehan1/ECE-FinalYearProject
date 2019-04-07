@@ -1,7 +1,7 @@
-## Client Tracking \label{clienttrackresults}
+## Listener Tracking \label{clienttrackresults}
 
 The following tables are the outcome of the testing described in Section
-\ref{expprocedure}, Client Tracking Testing Procedure. The distance estimates
+\ref{expprocedure}, Listener Tracking Testing Procedure. The distance estimates
 from the Android device to the three calibrated Raspberry Pi AltBeacons are
 listed, alongside the actual distance measurements.
 
@@ -92,4 +92,12 @@ distance estimate of 0.16m at 1m, 0.21m at 2m, 0.11m at 3m, 0.18m at 4m, and 0.3
 
 From the results obtained from testing, it can be seen that there is a maximum
 deviation of 2.65 meters, with a minimum deviation of 0.02 meters. There is an
-average deviation of 0.618 meters.
+average deviation of 0.618 meters. There is no direct correlation between
+increases in physical distance, and increases in the BLE distance estimate
+visible from the captured data. More thourough testing would be required in
+order to more accurately determine the accuracy of the BLE distance estimates.
+From the obtained results however, it can be seen that a minimum accuracy of
+within 2 meters may be achieved, which is sufficient for movement within a home
+environment. This, in addition to the multiple measurements being taken, will
+allow for greater accuracy, with outlier values being able to be discarded from
+measurements.

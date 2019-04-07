@@ -1,6 +1,6 @@
-## Client Tracking
+## Listener Tracking
 
-Another aspect of the project is the client tracking and audio routing. There are
+Another aspect of the project is the listener tracking and audio routing. There are
 multiple protocols which may be used in order to determine location of a mobile
 device. Bluetooth "Beacons" or Access Points are used, sending a packet to the device,
 the signal strength may be used to calculation and approximate distance\cite{Park15}.

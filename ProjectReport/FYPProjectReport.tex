@@ -320,15 +320,15 @@ a file, which Snapcast may then read from. Synchronicity is achieved by
 passing the server's time to all clients, allowing their received data
 buffers to be played back at the appropriate timing.
 
-\section{Client Tracking}\label{client-tracking}
+\section{Listener Tracking}\label{listener-tracking}
 
-Another aspect of the project is the client tracking and audio routing.
-There are multiple protocols which may be used in order to determine
-location of a mobile device. Bluetooth ``Beacons'' or Access Points are
-used, sending a packet to the device, the signal strength may be used to
-calculation and approximate distance\cite{Park15}. Using filtering
-techniques, distances may be calculated, using Bluetooth, to an accuracy
-of approximately 1.8 meters\cite{Park15}.
+Another aspect of the project is the listener tracking and audio
+routing. There are multiple protocols which may be used in order to
+determine location of a mobile device. Bluetooth ``Beacons'' or Access
+Points are used, sending a packet to the device, the signal strength may
+be used to calculation and approximate distance\cite{Park15}. Using
+filtering techniques, distances may be calculated, using Bluetooth, to
+an accuracy of approximately 1.8 meters\cite{Park15}.
 
 Location using WiFi may provide greater accuracy, however requires
 specialised hardware\cite{Gjengset14}. The 802.11AC WiFi standard allows
@@ -362,13 +362,24 @@ requests to be performed from Android devices on API level 28 (Android 9
 \chapter{Concepts, Modelling, and
 Design}\label{concepts-modelling-and-design}
 
-\section{Audio Server}\label{audio-server}
+There are two main design aspects to this project, firstly the audio
+streaming server, with multiple connected devices, and secondly, the
+listener tracking. Outlined are the proposed solutions to each of these
+aspects, along with any complications or limitations faced.
 
-The proposed design solution for the implementation of the system
-utilizes three Raspberry Pi 3 Model B+, each with a DAC for outputting
-high quality audio. The chosen audio server software runs on one device,
-alongside the streaming server, with the streaming clients running on
-the other devices.
+\section{Audio Streaming}\label{audio-streaming}
+
+The proposed design solution for the implementation of the audio
+streaming system utilizes three Raspberry Pi 3 Model B+, each with a DAC
+for outputting high quality audio. The chosen audio server software runs
+on one device, alongside the streaming server, with the streaming
+clients running on the other devices.
+
+Figure \ref{floorplan} shows the placement of the client and server
+devices, with the server being the lower of the devices on the
+downstairs portion of the floor plan. This device is connected to the
+network router/access point. Each of the client devices is connected to
+the network via Wi-Fi.
 
 \begin{figure}[H]
 \includegraphics{ConceptsModellingDesign/floorplan.png}
@@ -378,12 +389,40 @@ Locations (Represented by 'O's)}
 \label{floorplan}
 \end{figure}
 
-\section{Client Tracking}\label{client-tracking-1}
+Utilising Snapcast, multiple client devices may be connected to a
+central server device, with audio playback controlled from this server
+device, and transmit across the network for synchronous playback on the
+client devices.
 
-Client tracking is implemented using a combination of Bluetooth Low
-Energy Beacons, and an accompanying Android application.
+\section{Listener Tracking}\label{listener-tracking-1}
+
+Listener tracking is implemented using a combination of Bluetooth Low
+Energy Beacons, and an accompanying Android application. The BLE Beacons
+must be available to be scanned from the Android application, which, in
+turn, must control the volume of the audio client devices,
 
 \subsection{Beacons}\label{beacons}
+
+The AltBeacon BLE Beacon protocol is used for proximity data. The audio
+client devices are configured using modified ``BlueZ'' example
+code\cite{RPIAltBeacon}. AltBeacon is an open-source implementation of
+Apple's iBeacon standard. The AltBeacon device constantly transmits
+data, which is intended to be read by the Android application for the
+purpose of ranging.
+
+While there is an ``Android Beacon Library'', which allows for ranging
+of Google's Eddystone Beacons\cite{beaconlibrary}, this library is not
+available in Flutter, which negates the cross-platform compatibility
+advantage held by Flutter applications. This is discussed further in the
+following section.
+
+The AltBeacon protocol has a data structure which has a number of
+significant bytes. Bytes 7 and 8 must be set to ``0xBEAC'', which
+represents the AltBeacon advertisement code\cite{altbeaconprotocol}.
+Bytes 9-29 are reserved for the unique beacon identifier. In order to
+correctly calibrate the AltBeacon, the average RSSI value at a distance
+of 1 meter from the beacon device must be measured, and this value
+placed in byte 29.
 
 \subsection{Android Application}\label{android-application}
 
@@ -468,9 +507,78 @@ ClientVolume(String id, bool mute, int percent){
 \end{lstlisting}
 
 The encoded message can be transmit to the server using the
-``Socket.connect(IP, Port)'', and ``Socket.write(String)'' methods.
+``Socket.connect(IP, Port)'', and ``Socket.write(String)'' methods. An
+issue arose however in receiving the JSON response from the Snapcast
+server, with notification responses being received when audio playback
+was started or stopped, but no responses being received to the
+``Server.GetStatus'', or ``Client.SetVolume'' requests. This meant that
+client ID's could not be parsed from the server response, and, as such,
+client ID's were required to be hard-coded.
+
+The BLE Beacon ranging is implemented by utilising the Flutter
+``beacons'' plugin, which supports monitoring, and ranging of both
+iBeacon and AltBeacon Bluetooth Beacons\cite{flutterBeacons}. This
+plugin's GitHub repository gives an example application, which, when
+passed a Beacon ID performs a ranging request, printing the RSSI value
+to the screen. Also provided are methods for ranging while the
+application is in the background.
+
+\lstset{
+    caption=Flutter Beacons Generic Beacon Ranging,
+    basicstyle=\footnotesize, frame=tb,
+    xleftmargin=.2\textwidth, xrightmargin=.2\textwidth
+}
+
+\begin{lstlisting}[language=Java]
+Beacons.ranging(region: BeaconRegion(
+    identifier: 'test',
+        ids: ['id1', 'id2', 'id3'],
+      ),
+      inBackground: true,
+      ).listen((result) {
+            final Beacon beacon = result.beacons.first;
+      });
+\end{lstlisting}
+
+When combined with the volume control code, the intended implementation
+is to increase volume as the listener moves closer to the client device,
+and decrease the volume on the device being moved away from. This
+implementation was not completed due to issues faced in Dart
+development, with packages inconsistently loading correctly. This could
+be due to the relative infancy of the Flutter framework, or due to an
+inexperience in developing using Flutter and Dart. The advantages of
+using Flutter however, are that applications, using standard packages,
+and not platform specific code, may be executed on both Android and iOS
+devices, for example, the JSON volume control code could be executed on
+an iOS device, if available.
 
 \section{Extensibility}\label{extensibility}
+
+An ideal solution to the system proposed in this project would provide
+extensibility, both in the number of clients, and in teh number of
+concurrent users. With the implementation of Snapcast, any number of
+client devices may be used, so long as the network can handle the number
+of connections. Many router/access points combinations have a limit on
+the nnumber of Wi-Fi devices which can be connected to the network at
+once, with the Sky Q Hub used having a maximum number of 64 connected
+devices\cite{SkyQ}.
+
+As devices are added, the accuracy of the BLE beacons could act as an
+obstruction to extending the number of devices. Differences in accuracy
+between closely placed beacons could result in the scanning application
+choosing to route audio to the incorrect client device. However, as
+Snapcast can group client devices, and modify group volumes rather than
+individual volumes, client devices placed in too close of a proximity
+for accureate differentiation could be grouped, with one device in a
+group acting as a BLE beacon.
+
+Within the context of a home audio setup, it could be desirable to have
+multiple users have separate access to audio playback, from different
+client, at the same time. MPD and Mopidy can both be configure to run in
+multiple instances on the same device, with different ports. From these
+multiple audio server software instances, audio can be fed to Snapcast,
+which has the ability to be configured with multiple streams, from
+multiple inputs, which can be assigned by the useri\cite{snapcastZones}.
 
 \chapter{Experimental Equipment and
 Procedures}\label{experimental-equipment-and-procedures}
@@ -479,7 +587,7 @@ Procedures}\label{experimental-equipment-and-procedures}
 Requirements}\label{experimental-equipment-requirements}
 
 The following hardware equipment is required for testing of both the
-audio server software and the client tracking implementations:
+audio server software and the listener tracking implementations:
 
 \begin{table}[H]
 \centering
@@ -515,8 +623,8 @@ amplifier/speaker devices for audio output- This will allow for the
 client server streaming implementation between two Rasperry Pi's, with
 the third utilised for monitoring the devices used for streaming.
 
-\subsection{Client Tracking Equipment
-Requirements}\label{client-tracking-equipment-requirements}
+\subsection{Listener Tracking Equipment
+Requirements}\label{listener-tracking-equipment-requirements}
 
 In order to follow the testing steps outlined below in Section
 \ref{servertesting}, three Raspberry Pi Model 3 B+ are required, along
@@ -606,8 +714,8 @@ For analysis, compare all applicable parameters as recorded from Munin.
 The results and analysis may be seen in Section
 \ref{AudioServerSoftwareResults}.
 
-\subsection{Client Tracking Testing
-Procedure}\label{client-tracking-testing-procedure}
+\subsection{Listener Tracking Testing
+Procedure}\label{listener-tracking-testing-procedure}
 
 The testing steps outlined below will test the ranging capabilities of
 three Bluetooth Beacons, as measured using an Android Smartphone. Three
@@ -786,10 +894,10 @@ monitored. The graphs are divided into the categories of ``Network'',
 these graphs must be extracted, with the maximum, minimum, and average
 parameter values placed in a table for analysis.
 
-\section{Client Tracking
-Implementation}\label{client-tracking-implementation}
+\section{Listener Tracking
+Implementation}\label{listener-tracking-implementation}
 
-In order to execute the required testing of the client tracking, the
+In order to execute the required testing of the listener tracking, the
 following softwares must be installed, and the following configurations
 completed on the beacon devices, and the Android device.
 
@@ -818,7 +926,7 @@ type, ID, RSSI, and Transmission power. These parameters allow for the
 identification and calibration of the beacon, along with the location
 determination for the client.
 
-\section{Client Tracking Testing}\label{client-tracking-testing}
+\section{Listener Tracking Testing}\label{listener-tracking-testing}
 
 In order to determine the accuracy and reliability of a Bluetooth
 Beacon, specifically the AltBeacon protocol, for the purposes of
@@ -1615,21 +1723,24 @@ The low CPU frequency value of the MPD Server device can be attributed
 to a number of issues, such as thermal throttling, however, due to
 idling, the device can also lower CPU frequency to 600MHz\cite{RPiFreq}.
 
-While streaming, there were no noticable audio issues detected. Audio
-played from both the audio serving device, and the client device,
-streamed via SnapCast, with no ``popping'' or audio distortion
-experienced. As the performance of audio playback was not varying during
-testing, and due to the minimal differences between the server
-softwares, it is concluded that, due to ease of configuration, and
-lowest memory usage and CPU temperatures, along with comparable Network
-and System measurement values, the MPD server was chosen as the Server
-software to be used.
+While streaming, there were no noticable audio issues detected. It can
+be seen in the case of all audio server softwares, Section
+\ref{MuninData}, the highest network throughput occurs for files of the
+WAV format, followed by MP3. The lowest network throughput is
+experienced by audio in the FLAC format. Audio played from both the
+audio serving device, and the client device, streamed via Snapcast, with
+no ``popping'' or audio distortion experienced. As the performance of
+audio playback was not varying during testing, and due to the minimal
+differences between the server softwares, it is concluded that, due to
+ease of configuration, and lowest memory usage and CPU temperatures,
+along with comparable Network and System measurement values, the MPD
+server was chosen as the Server software to be used.
 
-\section{\texorpdfstring{Client Tracking
-\label{clienttrackresults}}{Client Tracking }}\label{client-tracking-2}
+\section{\texorpdfstring{Listener Tracking
+\label{clienttrackresults}}{Listener Tracking }}\label{listener-tracking-2}
 
 The following tables are the outcome of the testing described in Section
-\ref{expprocedure}, Client Tracking Testing Procedure. The distance
+\ref{expprocedure}, Listener Tracking Testing Procedure. The distance
 estimates from the Android device to the three calibrated Raspberry Pi
 AltBeacons are listed, alongside the actual distance measurements.
 
@@ -1724,7 +1835,16 @@ the distance estimate of 0.16m at 1m, 0.21m at 2m, 0.11m at 3m, 0.18m at
 
 From the results obtained from testing, it can be seen that there is a
 maximum deviation of 2.65 meters, with a minimum deviation of 0.02
-meters. There is an average deviation of 0.618 meters.
+meters. There is an average deviation of 0.618 meters. There is no
+direct correlation between increases in physical distance, and increases
+in the BLE distance estimate visible from the captured data. More
+thourough testing would be required in order to more accurately
+determine the accuracy of the BLE distance estimates. From the obtained
+results however, it can be seen that a minimum accuracy of within 2
+meters may be achieved, which is sufficient for movement within a home
+environment. This, in addition to the multiple measurements being taken,
+will allow for greater accuracy, with outlier values being able to be
+discarded from measurements.
 
 \chapter{Ethics}\label{ethics}
 
@@ -1827,7 +1947,7 @@ artists and production companies. The use of locally stored audio in
 this project may however increase the use of pirated audio, due to a
 lack of accessibility to these physical or digital media.
 
-\section{Listener Tracking}\label{listener-tracking}
+\section{Listener Tracking}\label{listener-tracking-3}
 
 Mobile tracking has a number of ethical implications, imposing on an
 individuals right to privacy. Access to a users location data must be
@@ -1853,11 +1973,15 @@ conditions of this data.
 \chapter{Conclusions and
 Recommendations}\label{conclusions-and-recommendations}
 
+\section{Conclusions}\label{conclusions}
+
+\section{Recommendations}\label{recommendations}
+
 \chapter{\texorpdfstring{Appendix
 \label{Appendix}}{Appendix }}\label{appendix}
 
-\section{Audio Server Software Munin
-Data}\label{audio-server-software-munin-data}
+\section{\texorpdfstring{Audio Server Software Munin Data
+\label{MuninData}}{Audio Server Software Munin Data }}\label{audio-server-software-munin-data}
 
 \subsection{MPD}\label{mpd-2}
 

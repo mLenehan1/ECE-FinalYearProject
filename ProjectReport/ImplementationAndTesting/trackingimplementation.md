@@ -1,6 +1,6 @@
-## Client Tracking Implementation
+## Listener Tracking Implementation
 
-In order to execute the required testing of the client tracking, the following
+In order to execute the required testing of the listener tracking, the following
 softwares must be installed, and the following configurations completed on the
 beacon devices, and the Android device.
 

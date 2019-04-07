@@ -115,10 +115,47 @@ A.~Uddin~Afaz, R.~Arablouei, F.~de~Hoog, B.~Kusy, R.~Jurdak, and N.~Bergmann,
   \url{https://developer.android.com/guide/topics/connectivity/wifi-rtt}
 \BIBentrySTDinterwordspacing
 
+\bibitem{RPIAltBeacon}
+\BIBentryALTinterwordspacing
+Max, ``Creating altbeacon with raspberry pi using bluez example code,'' 2018.
+  [Online]. Available:
+  \url{https://scribles.net/creating-altbeacon-using-bluez-example-code-on-raspberry-pi/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{beaconlibrary}
+\BIBentryALTinterwordspacing
+{Radius Networks}, ``Android beacon library,'' 2018. [Online]. Available:
+  \url{https://altbeacon.github.io/android-beacon-library/eddystone-how-to.html}
+\BIBentrySTDinterwordspacing
+
+\bibitem{altbeaconprotocol}
+\BIBentryALTinterwordspacing
+A.~Reltz, C.~Sexton, and F.~Varol, ``Altbeacon protocol specification v1.0,''
+  2015. [Online]. Available: \url{https://github.com/AltBeacon/spec}
+\BIBentrySTDinterwordspacing
+
 \bibitem{snaprpc}
 \BIBentryALTinterwordspacing
-J.~Pohl, ``Snapcasst json rpc control api,'' 2018. [Online]. Available:
+J.~Pohl, ``Snapcast json rpc control api,'' 2018. [Online]. Available:
   \url{https://github.com/badaix/snapcast/blob/master/doc/json_rpc_api/v2_0_0.md}
+\BIBentrySTDinterwordspacing
+
+\bibitem{flutterBeacons}
+\BIBentryALTinterwordspacing
+{Loup}, ``Beacons | flutter beacons plugin for android and ios,'' 2018.
+  [Online]. Available: \url{https://github.com/loup-v/beacons}
+\BIBentrySTDinterwordspacing
+
+\bibitem{SkyQ}
+\BIBentryALTinterwordspacing
+{Sky UK}, ``Sky q hub wireless broadband \& broadband router,'' 2019. [Online].
+  Available: \url{https://www.sky.com/shop/broadband-talk/sky-hub/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{snapcastZones}
+\BIBentryALTinterwordspacing
+J.~Pohl, ``Configuring zones,'' 2016. [Online]. Available:
+  \url{https://github.com/badaix/snapcast/issues/54}
 \BIBentrySTDinterwordspacing
 
 \bibitem{beaconscan}

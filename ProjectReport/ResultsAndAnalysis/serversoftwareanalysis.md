@@ -44,9 +44,12 @@ Server device can be attributed to a number of issues, such as thermal
 throttling, however, due to idling, the device can also lower CPU frequency to
 600MHz\cite{RPiFreq}.
 
-While streaming, there were no noticable audio issues detected. Audio played
+While streaming, there were no noticable audio issues detected. It can be seen
+in the case of all audio server softwares, Section \ref{MuninData}, the highest network throughput
+occurs for files of the WAV format, followed by MP3. The lowest network
+throughput is experienced by audio in the FLAC format. Audio played
 from both the audio serving device, and the client device, streamed via
-SnapCast, with no "popping" or audio distortion experienced. As the performance
+Snapcast, with no "popping" or audio distortion experienced. As the performance
 of audio playback was not varying during testing, and due to the minimal
 differences between the server softwares, it is concluded that, due to ease of
 configuration, and lowest memory usage and CPU temperatures, along with

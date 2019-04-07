@@ -25,6 +25,8 @@ Ethics/ethics.md
 Ethics/audiofiles.md
 Ethics/listenertracking.md
 ConclusionsAndRecommendations/conclusionsandrecommendations.md
+ConclusionsAndRecommendations/conclusions.md
+ConclusionsAndRecommendations/recommendations.md
 Appendices/appendix.md
 Appendices/serversoftwareresultimages.md
 Appendices/serversoftwareresulttables.md

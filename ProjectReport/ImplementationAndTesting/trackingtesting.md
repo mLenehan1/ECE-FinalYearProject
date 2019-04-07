@@ -1,4 +1,4 @@
-## Client Tracking Testing
+## Listener Tracking Testing
 
 In order to determine the accuracy and reliability of a Bluetooth Beacon,
 specifically the AltBeacon protocol, for the purposes of distance measurements

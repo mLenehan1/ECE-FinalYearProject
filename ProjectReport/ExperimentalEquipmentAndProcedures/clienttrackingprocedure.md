@@ -1,4 +1,4 @@
-### Client Tracking Testing Procedure
+### Listener Tracking Testing Procedure
 
 The testing steps outlined below will test the ranging capabilities of three
 Bluetooth Beacons, as measured using an Android Smartphone. Three AltBeacons,

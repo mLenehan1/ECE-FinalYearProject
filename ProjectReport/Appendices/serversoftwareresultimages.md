@@ -1,4 +1,4 @@
-## Audio Server Software Munin Data
+## Audio Server Software Munin Data \label{MuninData}
 
 ### MPD
 
