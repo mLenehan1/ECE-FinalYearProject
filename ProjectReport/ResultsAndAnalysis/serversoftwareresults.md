@@ -1,7 +1,10 @@
 ## Audio Server Software \label{AudioServerSoftwareResults}
 
-The following tables have been extracted from the collected Munin data. A full
-list of results can be found within the Appendices Section \ref{AppendicesAudioServerSoftwareTables}.
+The following tables have been extracted from the data collected from Munin. A
+full list of results can be found within the Appendices Section
+\ref{AppendicesAudioServerSoftwareTables}. The client and server data has been
+combined under the headings of Network, System, and Sensors, for each of the
+audio server software solutions.
 
 ### MPD
 

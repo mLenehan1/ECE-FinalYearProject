@@ -11,46 +11,48 @@ Database file #1: References/biblio.bib
 -- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+Warning--empty journal in muso
 
 Done.
-You've used 22 entries,
+You've used 32 entries,
             4087 wiz_defined-function locations,
-            929 strings with 10396 characters,
-and the built_in function-call counts, 8270 in all, are:
-= -- 623
-> -- 131
+            976 strings with 12045 characters,
+and the built_in function-call counts, 12157 in all, are:
+= -- 940
+> -- 193
 < -- 0
-+ -- 64
-- -- 32
-* -- 320
-:= -- 1552
-add.period$ -- 44
-call.type$ -- 22
-change.case$ -- 22
++ -- 94
+- -- 47
+* -- 480
+:= -- 2310
+add.period$ -- 64
+call.type$ -- 32
+change.case$ -- 32
 chr.to.int$ -- 0
-cite$ -- 22
-duplicate$ -- 690
-empty$ -- 804
-format.name$ -- 35
-if$ -- 1786
+cite$ -- 33
+duplicate$ -- 1011
+empty$ -- 1166
+format.name$ -- 52
+if$ -- 2628
 int.to.chr$ -- 0
-int.to.str$ -- 22
-missing$ -- 156
-newline$ -- 125
-num.names$ -- 22
-pop$ -- 491
+int.to.str$ -- 32
+missing$ -- 223
+newline$ -- 175
+num.names$ -- 32
+pop$ -- 690
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 615
+skip$ -- 914
 stack$ -- 0
-substring$ -- 22
-swap$ -- 365
+substring$ -- 32
+swap$ -- 538
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 22
-warning$ -- 0
-while$ -- 22
-width$ -- 24
-write$ -- 229
+type$ -- 32
+warning$ -- 1
+while$ -- 32
+width$ -- 34
+write$ -- 332
+(There was 1 warning)

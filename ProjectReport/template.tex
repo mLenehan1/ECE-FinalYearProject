@@ -4,8 +4,8 @@
 % -----------------
 % START OF PREAMBLE
 % -----------------
-\documentclass[11pt,a4paper]{scrreprt}
-
+\documentclass[11pt,a4paper,headinclude=false,footinclude=false]{scrreprt}
+\usepackage[a4paper,top=2cm,bottom=2cm,left=3cm,right=3cm]{geometry}
 
 % Commands
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
@@ -18,7 +18,7 @@
 \usepackage{mathtools}
 \usepackage{upquote}
 \usepackage{microtype}
-\usepackage{polyglossia}
+%\usepackage{polyglossia}
 \usepackage{longtable,booktabs}
 \usepackage{graphicx}
 \usepackage{grffile}
@@ -32,16 +32,14 @@
 \usepackage{float}
 \usepackage{tabu}
 \usepackage{gensymb}
+\usepackage{listings}
 
 
 % Polyglossia settings
-\setmainlanguage{english} % or danish
-\addto\captionsenglish{%
-  \renewcommand{\contentsname}{Table of Contents}
-}
-\addto\captionsdanish{%
-  \renewcommand{\contentsname}{Indholdsfortegnelse}
-}
+%\setmainlanguage{english} % or danish
+%\addto\captionsenglish{%
+%  \renewcommand{\contentsname}{Table of Contents}
+%}
 
 
 % Required for syntax highlighting
@@ -68,14 +66,17 @@ $highlighting-macros$
 % No paragraph indentation
 % and set space between paragraphs
 \setlength{\parindent}{0pt}
-\setlength{\parskip}{1em plus 2pt minus 1pt}
+\setlength{\parskip}{1em}
 \setlength{\emergencystretch}{3em} % Prevent overfull lines
-
+\renewcommand{\baselinestretch}{1.0}
+\pagestyle{plain}
+\pagenumbering{arabic}
 
 % -----------------
 %  END OF PREAMBLE
 % -----------------
 \begin{document}
+
 
 \input{CoverSheet/cover}
 

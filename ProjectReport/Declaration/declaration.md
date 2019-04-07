@@ -1,4 +1,10 @@
+\begingroup
+\renewcommand{\cleardoublepage}{}
+\renewcommand{\clearpage}{}
+
 # Declaration
+
+\endgroup
 
 I declare that this material, which I now submit for assessment, is entirely my
 own work and has not been taken from the work of others, save and to the extent

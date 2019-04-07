@@ -115,6 +115,18 @@ A.~Uddin~Afaz, R.~Arablouei, F.~de~Hoog, B.~Kusy, R.~Jurdak, and N.~Bergmann,
   \url{https://developer.android.com/guide/topics/connectivity/wifi-rtt}
 \BIBentrySTDinterwordspacing
 
+\bibitem{beaconscan}
+\BIBentryALTinterwordspacing
+N.~Bridoux, ``Beacon scanner,'' 2018. [Online]. Available:
+  \url{https://play.google.com/store/apps/details?id=com.bridou_n.beaconscanner}
+\BIBentrySTDinterwordspacing
+
+\bibitem{ssh}
+\BIBentryALTinterwordspacing
+{SSH Communications Security Inc.}, ``Ssh (secure shell) home page,'' 2019.
+  [Online]. Available: \url{https://www.ssh.com/ssh/}
+\BIBentrySTDinterwordspacing
+
 \bibitem{MuninMonitoring}
 \BIBentryALTinterwordspacing
 Munin, ``Munin wiki start,'' 2019. [Online]. Available:
@@ -131,6 +143,12 @@ Munin, ``Munin wiki start,'' 2019. [Online]. Available:
 \BIBentryALTinterwordspacing
 {Systutorials}, ``mpc (1) - linux man pages.'' [Online]. Available:
   \url{https://www.systutorials.com/docs/linux/man/1-mpc/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{bluez}
+\BIBentryALTinterwordspacing
+{BlueZ Project}, ``Bluez official linux bluetooth protocol stack,'' 2018.
+  [Online]. Available: \url{http://www.bluez.org/}
 \BIBentrySTDinterwordspacing
 
 \bibitem{RPiFreq}
@@ -152,6 +170,56 @@ Statista, ``Number of spotify premium subscribers worldwide from 1st quarter
 K.~Sehgal, ``Spotify and apple music should become record labels so musicians
   can make a fair living,'' 2018. [Online]. Available:
   \url{https://www.cnbc.com/2018/01/26/how-spotify-apple-music-can-pay-musicians-more-commentary.html}
+\BIBentrySTDinterwordspacing
+
+\bibitem{allocateRevenue}
+\BIBentryALTinterwordspacing
+W.~Page and D.~Safir, ``Money in, money out: Lessons from cmos in allocating
+  and distributing licensing revenue,'' \emph{Music \& Copyright Newsletter},
+  2018. [Online]. Available:
+  \url{http://serci.org/congress_documents/2018/money_in_money_out.pdf}
+\BIBentrySTDinterwordspacing
+
+\bibitem{rataVuser}
+\BIBentryALTinterwordspacing
+J.~Muikku, ``Pro rata anduser centric distribution models: A comparative
+  study,'' \emph{Digital Media Finland}, 2017. [Online]. Available:
+  \url{http://www.digitalmedia.fi/wp-content/uploads/2018/02/UC_report_final_171213.pdf}
+\BIBentrySTDinterwordspacing
+
+\bibitem{onlinePiracy}
+\BIBentryALTinterwordspacing
+J.~Poort, J.~Quintais, M.~A. van~der Ende, A.~Yagafarova, and M.~Hageraats,
+  ``Global online piracy study,'' \emph{SSRN Electronic Journal}, 2018.
+  [Online]. Available:
+  \url{https://www.ivir.nl/publicaties/download/Global-Online-Piracy-Study.pdf}
+\BIBentrySTDinterwordspacing
+
+\bibitem{muso}
+\BIBentryALTinterwordspacing
+{MUSO}, ``2017 annual piracy reports,'' 2018. [Online]. Available:
+  \url{https://www.muso.com/magazine/global-piracy-increases-throughout-2017-muso-reveals/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{licence}
+\BIBentryALTinterwordspacing
+{Statista}, ``Global small business streaming without music licenses in 2018,''
+  2019. [Online]. Available:
+  \url{https://www.statista.com/statistics/939333/illegal-music-streaming-by-business-owners-worldwide/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{bleprivacy}
+\BIBentryALTinterwordspacing
+W.~Ashford, ``Researchers raise privacy concerns about bluetooth low energy
+  devices,'' 2015. [Online]. Available:
+  \url{https://www.computerweekly.com/news/4500246790/Researchers-raise-privacy-concerns-about-Bluetooth-Low-Energy-devices}
+\BIBentrySTDinterwordspacing
+
+\bibitem{proxmarketing}
+\BIBentryALTinterwordspacing
+N.~Dunne, ``Proximity marketing: Often creepy, but it doesn't have to be,''
+  2017. [Online]. Available:
+  \url{https://www.digitalethics.org/essays/proximity-marketing-often-creepy-it-doesnt-have-be}
 \BIBentrySTDinterwordspacing
 
 \end{thebibliography}

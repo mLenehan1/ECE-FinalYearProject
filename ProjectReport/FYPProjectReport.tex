@@ -4,8 +4,8 @@
 % -----------------
 % START OF PREAMBLE
 % -----------------
-\documentclass[11pt,a4paper]{scrreprt}
-
+\documentclass[11pt,a4paper,headinclude=false,footinclude=false]{scrreprt}
+\usepackage[a4paper,top=2cm,bottom=2cm,left=3cm,right=3cm]{geometry}
 
 % Commands
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
@@ -18,7 +18,7 @@
 \usepackage{mathtools}
 \usepackage{upquote}
 \usepackage{microtype}
-\usepackage{polyglossia}
+%\usepackage{polyglossia}
 \usepackage{longtable,booktabs}
 \usepackage{graphicx}
 \usepackage{grffile}
@@ -32,16 +32,14 @@
 \usepackage{float}
 \usepackage{tabu}
 \usepackage{gensymb}
+\usepackage{listings}
 
 
 % Polyglossia settings
-\setmainlanguage{english} % or danish
-\addto\captionsenglish{%
-  \renewcommand{\contentsname}{Table of Contents}
-}
-\addto\captionsdanish{%
-  \renewcommand{\contentsname}{Indholdsfortegnelse}
-}
+%\setmainlanguage{english} % or danish
+%\addto\captionsenglish{%
+%  \renewcommand{\contentsname}{Table of Contents}
+%}
 
 
 % Required for syntax highlighting
@@ -68,14 +66,17 @@
 % No paragraph indentation
 % and set space between paragraphs
 \setlength{\parindent}{0pt}
-\setlength{\parskip}{1em plus 2pt minus 1pt}
+\setlength{\parskip}{1em}
 \setlength{\emergencystretch}{3em} % Prevent overfull lines
-
+\renewcommand{\baselinestretch}{1.0}
+\pagestyle{plain}
+\pagenumbering{arabic}
 
 % -----------------
 %  END OF PREAMBLE
 % -----------------
 \begin{document}
+
 
 \input{CoverSheet/cover}
 
@@ -95,7 +96,12 @@ like to thank Dr.~Gabriel-Miro Muntean, who acted as the second assessor
 for this project. His insight into testing practices, which gave greater
 clarity to the overall project results.
 
+\begingroup
+\renewcommand{\cleardoublepage}{} \renewcommand{\clearpage}{}
+
 \chapter{Declaration}\label{declaration}
+
+\endgroup
 
 I declare that this material, which I now submit for assessment, is
 entirely my own work and has not been taken from the work of others,
@@ -355,21 +361,79 @@ requests to be performed from Android devices on API level 28 (Android 9
 \chapter{Concepts, Modelling, and
 Design}\label{concepts-modelling-and-design}
 
+\section{Design}\label{design}
+
+\begin{figure}[H]
+\includegraphics{ConceptsModellingDesign/floorplan.png}
+\centering
+\caption{Floor Plan, with Downstairs (Left), Upstairs (Right), Raspberry Pi's
+represented by 'O's}
+\label{floorplan}
+\end{figure}
+
 \chapter{Experimental Equipment and
 Procedures}\label{experimental-equipment-and-procedures}
 
-\section{Experiment Equipment
-Requirements}\label{experiment-equipment-requirements}
+\section{Experimental Equipment
+Requirements}\label{experimental-equipment-requirements}
 
-\section{Experimental Procedures}\label{experimental-procedures}
+The following hardware equipment is required for testing of both the
+audio server software and the client tracking implementations:
 
-\subsection{Audio Server Software Testing
-Procedure}\label{audio-server-software-testing-procedure}
+\begin{table}[H]
+\centering
+    \begin{tabular}{||c|c||}
+    \hline
+    \multicolumn{2}{|c|}{\textbf{Experimental Equipment}} \\
+    \hline\hline
+    \textbf{Description} & \textbf{Quantity} \\
+    \hline\hline
+    Raspberry Pi 3 Model B+ & 3 \\
+    \hline
+    T5989DV - AC/DC Power Supply, 1 Output, 13 W, 5.1 V, 2.4 A & 3 \\
+    \hline
+    Adafruit I2S Audio Bonnet for Raspberry Pi - UDA1334A & 3 \\
+    \hline
+    SanDisk SDSDQAF3-008G-I & 3 \\
+    \hline
+    Audio Amplifier/Speaker Device (with Line In) & 3 \\
+    \hline
+    \end{tabular}
+    \caption{Required Experimental Equipment}
+    \label{ExperimentalEquip}
+\end{table}
+
+\subsection{Audio Server Software Equipment
+Requirements}\label{audio-server-software-equipment-requirements}
+
+In order to follow the testing steps outlined below in Section
+\ref{servertesting}, three Raspberry Pi Model 3 B+ are required, along
+with three T5989DC AC/DC Power Supplies, three SanDisk Industrial 8GB
+Class 10 MicroSD cards, two Adafruit I2S Audio Bonnets, and two audio
+amplifier/speaker devices for audio output- This will allow for the
+client server streaming implementation between two Rasperry Pi's, with
+the third utilised for monitoring the devices used for streaming.
+
+\subsection{Client Tracking Equipment
+Requirements}\label{client-tracking-equipment-requirements}
+
+In order to follow the testing steps outlined below in Section
+\ref{servertesting}, three Raspberry Pi Model 3 B+ are required, along
+with three T5989DC AC/DC Power Supplies, three SanDisk Industrial 8GB
+Class 10 Micro SD cards, and one Android device. This will allow for the
+Bluetooth AltBeacons to be implemented on the Raspberry Pi's, with the
+Android device running the Bluetooth Beacon detection application.
+
+\section{\texorpdfstring{Experimental Procedures
+\label{expprocedure}}{Experimental Procedures }}\label{experimental-procedures}
+
+\subsection{\texorpdfstring{Audio Server Software Testing Procedure
+\label{servertesting}}{Audio Server Software Testing Procedure }}\label{audio-server-software-testing-procedure}
 
 The testing steps outlined below will initiate playback of the available
 audio files from the audio server. Audio will be played for a total of
 six hours, divided amongst the three available audio formats, wave,
-FLAC, and MP3. As shown below, the three available albums werciwaree
+FLAC, and MP3. As shown below, the three available albums are
 ``Hardwired To Self Destruct'' by Metallica, in wave format, ``Superfuzz
 Bigmuff'' by Mudhoney in FLAC format, and ``Sonic Highways'' by Foo
 Fighters in MP3.
@@ -441,28 +505,86 @@ For analysis, compare all applicable parameters as recorded from Munin.
 The results and analysis may be seen in Section
 \ref{AudioServerSoftwareResults}.
 
+\subsection{Client Tracking Testing
+Procedure}\label{client-tracking-testing-procedure}
+
+The testing steps outlined below will test the ranging capabilities of
+three Bluetooth Beacons, as measured using an Android Smartphone. Three
+AltBeacons, running on Raspberry Pi 3 Model B+, are scanned for, with
+ranging requests done at distances of 1-5 meters at one meter intervals.
+
+Nicolas Bridoux's ``Beacon Scanner'' Android
+application\cite{beaconscan} is used in order to approximate the
+distance from the Android device to the AltBeacon, utilising bluetooth
+RSSI to estimate this distance. The following information may be taken
+from the application:
+
+\begin{itemize}
+ \item "Beacon Type"
+ \begin{itemize}
+  \item Returns the type of bluetooth beacon being used, e.g. iBeacon,
+  Eddyston Beacon, and AltBeacon
+ \end{itemize}
+ \item "Beacon ID"
+ \begin{itemize}
+  \item The UUID for the beacon being used
+ \end{itemize}
+ \item "RSSI"
+ \begin{itemize}
+  \item The Received Signal Strength Indication from the bluetooth beacon to
+  the Android device
+ \end{itemize}
+ \item "TX"
+ \begin{itemize}
+  \item The signal transmission strength from the bluetooth beacon
+ \end{itemize}
+\end{itemize}
+
+\subsection{Testing Steps:}\label{testing-steps-1}
+
+The following test procedure must be followed in order to retrieve data
+for the ranging accuracy of the bluetooth beacons.
+
+\begin{enumerate}
+ \item Using ssh, connect to the bluetooth beacon device.
+ \begin{itemize}
+  \item \$ ssh pi@<Beacon Device IP>
+ \end{itemize}
+ \item Execute the AltBeacon script on the Raspberry Pi.
+ \begin{itemize}
+  \item \$ sudo ./altbeacon
+ \end{itemize}
+ \item Enable Bluetooth on the Android device.
+ \item Run the Beacon Scanner application on the Android device.
+ \item Place the Android device at a distance of 1m from the beacon device.
+ \item Begin scanning for bluetooth devices.
+ \item Record the estimated distance from the beacon device to the Android
+ device.
+ \item Repeat steps 5-7 for distances of 2, 3, 4, and 5 meters.
+\end{enumerate}
+
+For analysis, compare all distance measured in the Beacon Scanner
+application with the actual distance. The results and analysis may be
+seen in Section \ref{clienttrackresults}.
+
 \chapter{Implementation and Testing}\label{implementation-and-testing}
 
-\section{Audio Server Software Testing
-Implementation}\label{audio-server-software-testing-implementation}
+\section{\texorpdfstring{Audio Server Software Implementation
+\label{audioserverimplementation}}{Audio Server Software Implementation }}\label{audio-server-software-implementation}
 
-A number of parameters must be tested in order to determine the optimal
-open -source audio server solution. Each audio server software is tested
-under equal testing conditions, with the values for network usage, CPU
-temperature, CPU load, and CPU frequency monitored and recorded.
-
-Testing setup consists of three Raspberry Pi's, each running the
-Raspbian Stretch Light OS, with the exception of the Volumio server. One
-Raspberry Pi runs the audio server software, and the Snapcast server
-software. The second Raspberry Pi runs the Snapclient software. The
-final Raspberry Pi runs the Munin server software, allowing to monitor
-the clients, which are running on the other two Raspberry Pi's.
-
-Both the audio server device and the Munin server device are connected
-to the network router/access point via Ethernet, with the client device
-connected to the network wirelessly.
+In order to excecute the required testing of the audio server software,
+the following softwares must be installed on the server device, and the
+following configurations completed.
 
 \subsection{SSH}\label{ssh}
+
+SSH is a protocol used for end-to-end client-server secure
+connections\cite{ssh}. SSH allows for remote login, and file transfers,
+from a client to a server device, i.e.~from a development PC to an
+embedded Linux device. SSH utilises ``keys'' for authentication, and
+provides secure encryption between the client and server. Within this
+project, SSH is used in order to log in to, and run commands on the
+Raspberry Pi's, which do not have a graphical desktop environment.
 
 \subsection{Munin}\label{munin}
 
@@ -489,19 +611,117 @@ a two minute space between formats.
 
 MPC is the ``Music Player Controller'', a software used for controlling
 MPD, or MPD derived softwares \cite{mpc}. As such, it may be used to
-control MPD, Mopidy, and Volumio.
+control MPD, Mopidy, and Volumio. Within the audio server software
+testing procedure, MPC is used in order to queue, play, and stop audio
+playback on each of the server configurations.
+
+\subsection{Configurations}\label{configurations}
+
+On the MPD server device, the configuration file, found at the location
+``/etc/mpd.conf'' must be modified in order to output audio to the
+Snapcast server. The default ``ALSA'' output must first be deleted, and
+a new ``FIFO'' output must be added as follows:
+
+\lstset{
+    caption=MPD SnapServer Configuration,
+    basicstyle=\footnotesize, frame=tb,
+    xleftmargin=.2\textwidth, xrightmargin=.2\textwidth
+}
+
+\begin{lstlisting}[language=bash]
+audio_output {
+    type    "fifo"
+    name    "my pipe"
+    path    "/tmp/snapfifo"
+    format  "48000:16:2"
+    mixer_type  "software"
+}
+\end{lstlisting}
+
+On the Mopidy server device, the configuration file, found at the
+location ``/etc/mopidy/mopidy.conf'' must be modified in order to output
+audio to the Snapcast server. The defualt audio output must be removed,
+with a new ``filesink'' output added as follows:
+
+\lstset{
+    caption=Mopidy SnapServer Configuration,
+    basicstyle=\footnotesize, frame=tb,
+    xleftmargin=.2\textwidth, xrightmargin=.2\textwidth
+}
+
+\begin{lstlisting}[language=bash]
+[audio]
+output = audioresample ! audioconvert !
+audio/x-raw,rate=48000,channels=2,format=S16LE
+! wavenc ! filesink location=/tmp/snapfifo
+\end{lstlisting}
+
+These audio outputs are used to feed audio to the Snapcast server, to be
+send via the network to the SnapCast client devices. The MPD
+configuration can also be used on the Volumio server, as Volumio
+utilises MPD and it's configuration files for its audio playback.
+
+\section{Audio Server Software
+Testing}\label{audio-server-software-testing}
+
+A number of parameters must be tested in order to determine the optimal
+open-source audio server solution. Each audio server software is tested
+under equal testing conditions, with the values for network usage, CPU
+temperature, CPU load, and CPU frequency monitored and recorded.
+
+Testing setup consists of three Raspberry Pi's, each running the
+Raspbian Stretch Light OS, with the exception of the Volumio server test
+configuration. One Raspberry Pi runs the audio server software, and the
+Snapcast server software. The second Raspberry Pi runs the Snapclient
+software. The final Raspberry Pi runs the Munin server software,
+allowing to monitor the clients, which are running on the other two
+Raspberry Pi's. Both the audio server device and the Munin server device
+are connected to the network router/access point via Ethernet, with the
+client device connected to the network wirelessly.
+
+Munin returns graphs of system parameters for the system being
+monitored. The graphs are divided into the categories of ``Network'',
+``Processes'', ``System'', and ``Sensors''. The information contained in
+these graphs must be extracted, with the maximum, minimum, and average
+parameter values placed in a table for analysis.
+
+\section{Client Tracking
+Implementation}\label{client-tracking-implementation}
+
+In order to execute the required testing of the client tracking, the
+following softwares must be installed, and the following configurations
+completed on the beacon devices, and the Android device.
+
+\subsection{SSH}\label{ssh-1}
+
+As described in Section \ref{audioserverimplementation}, SSH allows for
+the remote login from a client device to a server device, allowing for
+commands to be run on the Raspberry Pi, sent from a client PC.
+
+\subsection{BlueZ}\label{bluez}
+
+BlueZ is the ``Official Linux Bluetooth protocol stack''\cite{bluez}.
+BlueZ provides a number of code examples for creating bluetooth beacons,
+using the AltBeacon protocol. These examples can be modified for the
+creation of AltBeacons with unique ID's, and allow for the calibration
+of these beacons.
+
+\section{Client Tracking Testing}\label{client-tracking-testing}
 
 \chapter{Results and Analysis}\label{results-and-analysis}
 
 The following results and analysis have been completed following testing
-of the audio server softwares, and the client tracking.
+of the audio server softwares, and the client tracking, as described in
+Section \ref{servertesting}.
 
 \section{\texorpdfstring{Audio Server Software
 \label{AudioServerSoftwareResults}}{Audio Server Software }}\label{audio-server-software}
 
-The following tables have been extracted from the collected Munin data.
-A full list of results can be found within the Appendices Section
-\ref{AppendicesAudioServerSoftwareTables}.
+The following tables have been extracted from the data collected from
+Munin. A full list of results can be found within the Appendices Section
+\ref{AppendicesAudioServerSoftwareTables}. The client and server data
+has been combined under the headings of Network, System, and Sensors,
+for each of the audio server software solutions.
 
 \subsection{MPD}\label{mpd-1}
 
@@ -1270,7 +1490,106 @@ lowest memory usage and CPU temperatures, along with comparable Network
 and System measurement values, the MPD server was chosen as the Server
 software to be used.
 
-\section{Client Tracking}\label{client-tracking-1}
+\section{\texorpdfstring{Client Tracking
+\label{clienttrackresults}}{Client Tracking }}\label{client-tracking-1}
+
+The following tables are the outcome of the testing described in Section
+\ref{expprocedure}, Client Tracking Testing Procedure. The distance
+estimates from the Android device to the three calibrated Raspberry Pi
+AltBeacons are listed, alongside the actual distance measurements.
+
+\subsection{Server Device Beacon}\label{server-device-beacon}
+
+\begin{table}[H]
+\centering
+    \begin{tabular}{||c|c|c||}
+    \hline
+    \multicolumn{3}{|c|}{\textbf{Bluetooth Distance Measurements (m)}} \\
+    \hline\hline
+    Distance Measurement & BLE Distance Estimate & Deviation \\
+    \hline
+    1 & 0.97 & 0.03 \\
+    \hline
+    2 & 2.44 & -0.44 \\
+    \hline
+    3 & 3.19 & -0.19 \\
+    \hline
+    4 & 3.62 & 0.38 \\
+    \hline
+    5 & 4.54 & 0.46 \\
+    \hline\hline
+    \end{tabular}
+    \caption{Server Device Beacon Bluetooth Distance Measurements}
+    \label{serverBLEmeasurement}
+\end{table}
+
+As seen in Table \ref{serverBLEmeasurement}, there is a deviation in the
+distance estimate of 0.03m at 1m, 0.44m at 2m, 0.19m at 3m, 0.38m at 4m,
+and 0.46m at 5m.
+
+\subsection{\texorpdfstring{``Client1'' Device
+Beacon}{Client1 Device Beacon}}\label{client1-device-beacon}
+
+\begin{table}[H]
+\centering
+    \begin{tabular}{||c|c|c||}
+    \hline
+    \multicolumn{3}{|c|}{\textbf{Bluetooth Distance Measurements (m)}} \\
+    \hline\hline
+    Distance Measurement & BLE Distance Estimate & Deviation \\
+    \hline
+    1 & 0.98 & 0.02 \\
+    \hline
+    2 & 1.34 & 0.66 \\
+    \hline
+    3 & 2.16 & 0.84 \\
+    \hline
+    4 & 1.35 & 2.65 \\
+    \hline
+    5 & 2.40 & 2.60 \\
+    \hline\hline
+    \end{tabular}
+    \caption{"Client1" Device Beacon Bluetooth Distance Measurements}
+    \label{client1BLEmeasurement}
+\end{table}
+
+As seen in Table \ref{client1BLEmeasurement}, there is a deviation in
+the distance estimate of 0.02m at 1m, 0.66m at 2m, 0.84m at 3m, 2.65m at
+4m, and 2.60m at 5m.
+
+\subsection{\texorpdfstring{``Client2'' Device
+Beacon}{Client2 Device Beacon}}\label{client2-device-beacon}
+
+\begin{table}[H]
+\centering
+    \begin{tabular}{||c|c|c||}
+    \hline
+    \multicolumn{3}{|c|}{\textbf{Bluetooth Distance Measurements (m)}} \\
+    \hline\hline
+    Distance Measurement & BLE Distance Estimate & Deviation \\
+    \hline
+    1 & 1.16 & -0.16 \\
+    \hline
+    2 & 2.21 & -0.21 \\
+    \hline
+    3 & 2.89 & 0.11 \\
+    \hline
+    4 & 4.18 & -0.18 \\
+    \hline
+    5 & 5.34 & -0.34 \\
+    \hline\hline
+    \end{tabular}
+    \caption{"Client2" Device Beacon Bluetooth Distance Measurements}
+    \label{client2BLEmeasurement}
+\end{table}
+
+As seen in Table \ref{client2BLEmeasurement}, there is a deviation in
+the distance estimate of 0.16m at 1m, 0.21m at 2m, 0.11m at 3m, 0.18m at
+4m, and 0.34m at 5m.
+
+From the results obtained from testing, it can be seen that there is a
+maximum deviation of 2.65 meters, with a minimum deviation of 0.02
+meters. There is an average deviation of 0.618 meters.
 
 \chapter{Ethics}\label{ethics}
 
@@ -1279,7 +1598,11 @@ software to be used.
 While there have been questions raised in recent years over the ethical
 problems with streaming services, and the revenue paid to artists whose
 music is played via their platforms, there are also a number of issues
-with audio piracy from users illegally downloading audio tracks.
+with audio piracy from users illegally downloading audio tracks. As
+solutions such as the one provided by this project offer both options
+for both streaming and locally stored audio, these ethical issues must
+be explored in order to determine the impact that a solution such as
+this may have.
 
 \subsection{Streaming Solutions}\label{streaming-solutions}
 
@@ -1287,13 +1610,52 @@ With the large increase in paying subscribers in audio streaming
 services, such as Spotify, in the last number of years questions have
 arisen with regards to the payment received by artists. Spotify, which,
 as of 2018\cite{SpotPay18} is the largest audio streaming service, with
-a paying subscriber count of approximately 96 million as of Q4 2018
-\cite{SpotSubs18}, has been criticized for the payment which the artists
-on its service receive. More popular artists, who hold a larger
-percentage of the rights to their music can earn between \$0.006 and
-\$0.0084 per stream. Studies have shown that per million plays, an
-artist generates approximately \$7,000 on Spotify, or approximately
-\$1,650 on Pandora\cite{CNBCSpot18}.
+a paying subscriber count of approximately 96 million as of Q4
+2018\cite{SpotSubs18}, as displayed in Figure \ref{PayingSubs}, has been
+criticized for the payment which the artists on its service receive.
+More popular artists, who hold a larger percentage of the rights to
+their music can earn between \$0.006 and \$0.0084 per stream. Studies
+have shown that per million plays, an artist generates approximately
+\$7,000 on Spotify, or approximately \$1,650 on
+Pandora\cite{CNBCSpot18}.
+
+While Spotify and other streaming services may provide users with
+unprecedented access to audio, it has been noted that the effect it has
+had on audio track sales could be a detriment to artist income. A paper
+co-authored by Spotify's Director of Economics has examined the
+``pro-rata'' model used by Spotify to distribute subscriber income,
+which is based on an artists percentage of total track plays, concluding
+that a pro-rata model is beneficial to artists over a user-centric model
+when, in the case of \$70 million distributable income, increasing
+system costs exceed 4.64\%\cite{allocateRevenue}.
+
+Conversely, a 2017 paper from Digital Media Finland explores the
+benefits of the user-centric system\cite{rataVuser}. This study shows
+that in the ``pro-rata'' model, individual user habits are not accounted
+for, with subscription income distributed across all tracks played. In a
+``user-centric'' model, the subscription income is distributed across
+all of the tracks played by the user. This is beneficial to artists of
+less popular genres, giving their listeners the opportunity to support
+the artists they listen to, without placing their money in a pot for
+distribution.
+
+\begin{figure}[H]
+\includegraphics{Ethics/PayingSubscribers.png}
+\centering
+\caption{Spotify Paying Subscribers in Millions from Q1 2015 to Q4 2018}
+\label{PayingSubs}
+\end{figure}
+
+With the significant increase in spending on streaming service
+subscriptions over physical media sales, and digital downloads, as in
+Figure \ref{StreamBecomesRiver}, the fair and equal payment of artists
+must be considered. Artists of more niche genres can be negatively
+affected by the currently used ``pro-rata'' models, however, the change
+to a ``user-centric'' model may not benefit these artists, as they
+increase the processing costs at the side of the streaming service. As
+such, care must be taken to ensure that artists incomes are not so
+negatively affected so as to reduce the number of smaller artists within
+the industry.
 
 \begin{figure}[H]
 \includegraphics{Ethics/StreamBecomesRiver.png}
@@ -1302,19 +1664,56 @@ artist generates approximately \$7,000 on Spotify, or approximately
 \label{StreamBecomesRiver}
 \end{figure}
 
-\begin{figure}[H]
-\includegraphics{Ethics/ChartTopper.png}
-\centering
-\caption{Streaming Service Subscriber Numbers - Jan 2018 \cite{SpotPay18}}
-\label{ChartTopper}
-\end{figure}
-
 \subsection{Audio Piracy}\label{audio-piracy}
+
+When considering solutions which use locally stored audio, the ethical
+issue of sourcing these audio tracks must be discussed. While it may be
+presumed that, with the increase in the availability of audio streaming,
+audio piracy would significantly decrease, it has been noted that audio
+piracy affects physical and digital media
+consumption\cite{onlinePiracy}. While the Global Online Piracy
+Study\cite{onlinePiracy} suggests that audio piracy is decreasing, MUSO,
+a company aiming to study and solve issues with audio piracy, has stated
+in their annual piracy report a 1.6\% increase in global piracy in
+2017\cite{muso}. Joost and Quintais however contest these figures,
+noting that MUSO ``overestimate the number of and visits to pirate
+websites''\cite{onlinePiracy}.
+
+While piracy via illegal downloads seems to be decreasing, only
+replacing the declining digital and physical sales\cite{SpotPay18},
+illegal streaming via personal licences being used in place of business
+licences may be a more prominent issue, with a survey showing 83\% of
+small business owners use a personal streaming service account in their
+premises\cite{licence}.
+
+Sourcing audio files from legal sources, such as physical or online
+retailers, is important in order to ensure proper payment is received by
+artists and production companies. The use of locally stored audio in
+this project may however increase the use of pirated audio, due to a
+lack of accessibility to these physical or digital media.
 
 \section{Listener Tracking}\label{listener-tracking}
 
-There are a number of ethical issues involved with client tracking in
-services such as that described in this project.
+Mobile tracking has a number of ethical implications, imposing on an
+individuals right to privacy. Access to a users location data must be
+privileged, accessible only when necessary, and only from the
+application requiring the data. Bluetooth beacons, as used within this
+project, have the capacity for two-way communication. As such, there is
+the concern of the information being intercepted, which could lead to
+malicious use of the captured data\cite{bleprivacy}.
+
+As proximity based services become more common, it becomes increasingly
+important to ensure the protection of a users personal data, and
+location information. Both the Apple App Store, and Google Play Store
+require that any application which requires access to location services,
+or to bluetooth services request permission from the user to access
+these services. This allows users the ability to block applications
+accessing this information. Furthermore, laws have been introduced
+prohibiting companies from using personal data from non-consenting
+users\cite{proxmarketing}. Transparency is required throughout the
+privacy policies of applications and services, in order to correctly
+inform users of the data being accessed, and the storage and usage
+conditions of this data.
 
 \chapter{Conclusions and
 Recommendations}\label{conclusions-and-recommendations}

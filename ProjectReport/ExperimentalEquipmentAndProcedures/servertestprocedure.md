@@ -1,9 +1,9 @@
-### Audio Server Software Testing Procedure
+### Audio Server Software Testing Procedure \label{servertesting}
 
 The testing steps outlined below will initiate playback of the available audio
 files from the audio server. Audio will be played for a total of six hours,
 divided amongst the three available audio formats, wave, FLAC, and MP3. As
-shown below, the three available albums werciwaree "Hardwired To Self Destruct" by
+shown below, the three available albums are "Hardwired To Self Destruct" by
 Metallica, in wave format, "Superfuzz Bigmuff" by Mudhoney in FLAC format, and
 "Sonic Highways" by Foo Fighters in MP3.
 
