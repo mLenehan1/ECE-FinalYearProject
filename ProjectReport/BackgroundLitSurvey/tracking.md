@@ -7,8 +7,8 @@ the signal strength may be used to calculate and approximate distance\cite{Park1
 Using filtering techniques, distances may be calculated, using Bluetooth, to an
 accuracy of approximately 1.8 meters\cite{Park15}.
 
-Location using WiFi may provide greater accuracy, however requires specialised
-hardware\cite{Gjengset14}. The 802.11AC WiFi standard allows for the use of Beamforming,
+Location using Wi-Fi may provide greater accuracy, however requires specialised
+hardware\cite{Gjengset14}. The 802.11AC Wife standard allows for the use of Beamforming,
 in which multiple antennas transmit at once, allowing for the targeted transmission of
 data\cite{Heejung14}. Using Angle-of-Arrival (AoA), Time-of-Flight (ToF), and Multiple
 Signal Classification (MUSIC) algorithms, the distance and direction from
@@ -26,9 +26,9 @@ for ranging requests, which provide the requesting device with a distance
 estimate, based on the received signal strength indication (RSSI) from beacon device to
 the user device.
 
-### 802.11MC WiFi
+### 802.11MC Wi-Fi
 
-The 802.11MC WiFi protocol provides location determination functionality, using
+The 802.11MC Wi-Fi protocol provides location determination functionality, using
 Round Trip Time (RTT). This protocol, if implemented on the embedded Linux
 platforms, would allow for ranging requests to be performed from Android devices
 on API level 28 (Android 9 "Pie")\cite{droidRTT}.

@@ -94,7 +94,7 @@ From the results obtained from testing, it can be seen that there is a maximum
 deviation of 2.65 meters, with a minimum deviation of 0.02 meters. There is an
 average deviation of 0.618 meters. There is no direct correlation between
 increases in physical distance, and increases in the BLE distance estimate
-visible from the captured data. More thourough testing would be required in
+visible from the captured data. More thorough testing would be required in
 order to more accurately determine the accuracy of the BLE distance estimates.
 From the obtained results however, it can be seen that a minimum accuracy of
 within 2 meters may be achieved, which is sufficient for movement within a home

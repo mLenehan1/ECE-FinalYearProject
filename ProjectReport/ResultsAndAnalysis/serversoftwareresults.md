@@ -10,9 +10,9 @@ audio server software solutions.
 
 The network information for the MPD Server and SnapClient configuration below
 shows there are no Ethernet errors or traffic on the Client device, as it is
-connected to the network via WiFi. Conversely, on the Server device, there are
+connected to the network via Wi-Fi. Conversely, on the Server device, there are
 Wireless network errors, and traffic values, as the server device is both setup
-on the network via WiFi and Ethernet.
+on the network via Wi-Fi and Ethernet.
 
 \begin{table}[H]
 \centering
@@ -407,7 +407,7 @@ of 616.29 frequency scaling on all four CPU cores. The CPU temperature on the
 Client device has an average value of 44.63 \degree C.
 
 The CPU frequency of the Server device kept, on average, at the maximum
-frequency of 1.4GHz, with all four CPU cores frequecny scaling at 646.91MHz,
+frequency of 1.4GHz, with all four CPU cores frequency scaling at 646.91MHz,
 and average temperature of 58.94 \degree C.
 
 \begin{table}[H]
@@ -569,7 +569,7 @@ wireless and wired errors and traffic.
 
 Within the System measurements, it can be seen that the Server device uses on average
 965MB of the 1GB of available RAM, has average load of 0.11. The Server device
-has approxiamtely 2.61% CPU Usage on average.
+has approximately 2.61% CPU Usage on average.
 
 The Client device uses, on average, 224MB of the available 1GB of RAM, and has
 system load of 0.14 on average. The Client device averages approximately 4.07%

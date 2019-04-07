@@ -18,4 +18,4 @@ The distance results obtained from the execution of the testing steps outlined
 in Section \ref{expprocedure} must be utilised to create tables of physical
 distance, estimated distance, and the deviation of the estimate from the actual
 distance. As such, these tables may be used in the analysis of the accuracy of
-bluetooth beacons in location determination.
+Bluetooth beacons in location determination.

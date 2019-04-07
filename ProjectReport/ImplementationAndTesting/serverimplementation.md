@@ -1,6 +1,6 @@
 ## Audio Server Software Implementation \label{audioserverimplementation}
 
-In order to excecute the required testing of the audio server software, the
+In order to execute the required testing of the audio server software, the
 following softwares must be installed on the server device, and the following
 configurations completed.
 
@@ -28,7 +28,7 @@ execution at specified times, or set time intervals \cite{crontab}. Using a cron
 entering cron jobs, the required testing schedule can be run on the audio server
 Raspberry Pi. For the purposes of testing the audio server software while
 streaming audio files of different formats, a crontable is configured to play
-audio in the Wave format, followed by audio in the FLAC format, followed by
+audio in the WAV format, followed by audio in the FLAC format, followed by
 audio in the MP3 format. Each audio format is played continuously for two
 hours, with a two minute space between formats.
 
@@ -64,7 +64,7 @@ audio_output {
 
 On the Mopidy server device, the configuration file, found at the location
 "/etc/mopidy/mopidy.conf" must be modified in order to output audio to the
-Snapcast server. The defualt audio output must be removed, with a new "filesink"
+Snapcast server. The default audio output must be removed, with a new "filesink"
 output added as follows:
 
 \lstset{
@@ -79,8 +79,8 @@ audio/x-raw,rate=48000,channels=2,format=S16LE
 ! wavenc ! filesink location=/tmp/snapfifo
 \end{lstlisting}
 
-These audio outputs are used to feed audio to the Snapcast server, to be send via
+These audio outputs are used to feed audio to the Snapcast server, to be sent via
 the network to the Snapcast client devices. The MPD configuration can also be used
-on the Volumio server, as Volumio utilises MPD and it's configuration files for
+on the Volumio server as Volumio utilises MPD and it's configuration files for
 its audio playback.
 

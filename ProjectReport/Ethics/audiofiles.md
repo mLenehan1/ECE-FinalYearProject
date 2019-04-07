@@ -4,7 +4,7 @@ While there have been questions raised in recent years over the ethical problems
 with streaming services, and the revenue paid to artists whose music is played
 via their platforms, there are also a number of issues with audio piracy from users
 illegally downloading audio tracks. As solutions such as the one provided by
-this project offer both options for both streaming and locally stored audio,
+this project offer options for both streaming and locally stored audio,
 these ethical issues must be explored in order to determine the impact that a
 solution such as this may have.
 
@@ -72,7 +72,7 @@ digital media consumption\cite{onlinePiracy}. While the Global Online Piracy
 Study\cite{onlinePiracy} suggests that audio piracy is decreasing, MUSO, a
 company aiming to study and solve issues with audio piracy, has stated in their
 annual piracy report a 1.6\% increase in global piracy in 2017\cite{muso}. Joost
-and Quintais however contest these figures, noting that MUSO "overestimate the
+and Quintais, however, contest these figures, noting that MUSO "overestimate the
 number of and visits to pirate websites"\cite{onlinePiracy}.
 
 While piracy via illegal downloads seems to be decreasing, only replacing the declining digital

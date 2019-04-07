@@ -11,7 +11,7 @@ data\cite{bleprivacy}.
 As proximity based services become more common, it becomes increasingly
 important to ensure the protection of a users personal data, and location
 information. Both the Apple App Store, and Google Play Store require that any
-application which requires access to location services, or to bluetooth services
+application which requires access to location services, or to Bluetooth services
 request permission from the user to access these services. This allows users the
 ability to block applications accessing this information. Furthermore, laws have
 been introduced prohibiting companies from using personal data from

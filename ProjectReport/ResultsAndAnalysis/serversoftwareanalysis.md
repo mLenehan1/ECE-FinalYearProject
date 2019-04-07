@@ -2,7 +2,7 @@
 \label{AudioServerSoftwareAnalysis}
 
 From the results in Table \ref{MPDclientserverNetTab}, Table
-\ref{MopidyclientserverNetTab}, Table and \ref{VolumioclientserverNetTab}
+\ref{MopidyclientserverNetTab}, and Table \ref{VolumioclientserverNetTab}
 it can be seen that the Mopidy Audio Server experienced the least Ethernet
 drops, and the most outbound Ethernet Traffic (with the same value as Volumio).
 The Mopidy server also had the highest WLAN Traffic. The difference in Ethernet
@@ -33,18 +33,18 @@ and Mopidy Servers had system CPU Usage values of $5.89\%$ and $3.64\%$, with ma
 values of $15.08\%$ and $7.53\%$ respectively.
 
 From the results in Table \ref{MPDclientserverSensorTab}, Table
-\ref{MopidyclientserverSensorTab}, Table \ref{VolumioclientserverSensorTab} it
+\ref{MopidyclientserverSensorTab}, and Table \ref{VolumioclientserverSensorTab} it
 can be seen that the lowest average CPU frequency, temperature, and CPU
 frequency scaling were achieved by the MPD server. This server had an average
 CPU frequency of $656.53MHz$, average CPU frequency scaling of $691.30MHz$, and
 average CPU temperature of $56.11 \degree C$. The Mopidy and Volumio Servers had
-average CPU frequency values of $1.4GHz$, with average frequecy scaling values
+average CPU frequency values of $1.4GHz$, with average frequency scaling values
 of $646.91MHz$ and $1.4GHz$ respectively. The low CPU frequency value of the MPD
 Server device can be attributed to a number of issues, such as thermal
 throttling, however, due to idling, the device can also lower CPU frequency to
 600MHz\cite{RPiFreq}.
 
-While streaming, there were no noticable audio issues detected. It can be seen
+While streaming, there were no noticeable audio issues detected. It can be seen
 in the case of all audio server softwares, Section \ref{MuninData}, the highest network throughput
 occurs for files of the WAV format, followed by MP3. The lowest network
 throughput is experienced by audio in the FLAC format. Audio played

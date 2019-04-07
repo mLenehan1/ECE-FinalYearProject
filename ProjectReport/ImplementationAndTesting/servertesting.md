@@ -8,7 +8,7 @@ load, and CPU frequency monitored and recorded.
 Testing setup consists of three Raspberry Pi's, each running the Raspbian
 Stretch Light OS, with the exception of the Volumio server test configuration.
 One Raspberry Pi runs the audio server software, and the Snapcast server software.
-The second Raspberry Pi runs the Snapclient software. The final Raspberry Pi
+The second Raspberry Pi runs the Snapcast client software. The final Raspberry Pi
 runs the Munin server software, allowing to monitor the clients, which are running
 on the other two Raspberry Pi's. Both the audio server device and the Munin
 server device are connected to the network router/access point via Ethernet,

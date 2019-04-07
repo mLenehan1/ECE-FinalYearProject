@@ -176,13 +176,16 @@ packages, and not platform specific code, may be executed on both Android and
 iOS devices, for example, the JSON volume control code could be executed on an
 iOS device, if available.
 
+All code can be found in the public GitHub at the following location:
+\url{https://github.com/mLenehanDCU/ECEIOTProject}
+
 ## Extensibility
 
 An ideal solution to the system proposed in this project would provide
-extensibility, both in the number of clients, and in teh number of concurrent
+extensibility, both in the number of clients, and in the number of concurrent
 users. With the implementation of Snapcast, any number of client devices may be
 used, so long as the network can handle the number of connections. Many
-router/access points combinations have a limit on the nnumber of Wi-Fi devices
+router/access points combinations have a limit on the number of Wi-Fi devices
 which can be connected to the network at once, with the Sky Q Hub used having a
 maximum number of 64 connected devices\cite{SkyQ}.
 
@@ -191,7 +194,7 @@ obstruction to extending the number of devices. Differences in accuracy between
 closely placed beacons could result in the scanning application choosing to
 route audio to the incorrect client device. However, as Snapcast can group
 client devices, and modify group volumes rather than individual volumes, client
-devices placed in too close of a proximity for accureate differentiation could
+devices placed in too close of a proximity for accurate differentiation could
 be grouped, with one device in a group acting as a BLE beacon.
 
 Within the context of a home audio setup, it could be desirable to have multiple
@@ -200,4 +203,4 @@ time. MPD and Mopidy can both be configure to run in multiple instances on the
 same device, with different ports. From these multiple audio server software
 instances, audio can be fed to Snapcast, which has the ability to be configured
 with multiple streams, from multiple inputs, which can be assigned by the
-useri\cite{snapcastZones}.
+user\cite{snapcastZones}.

@@ -6,10 +6,10 @@ Further testing could allow for the combination of these functionalities. With
 both code implementations combined in the same application, audio volume on the
 client devices could be automatically determined via the listeners location.
 
-With the introduction of 802.11mc access points, and Android Pie, the Android
+With the introduction of 802.11MC access points, and Android Pie, the Android
 Wi-Fi Round Trip Time implementation could be used for more accurate location
-determination. If the embedded linux platforms used for the client and server
-devices had support for this 802.11mc protocol, the same server software
+determination. If the embedded Linux platforms used for the client and server
+devices had support for this 802.11MC protocol, the same server software
 implementation could be used, with RTT ranging used in the place of Bluetooth
 ranging.
 

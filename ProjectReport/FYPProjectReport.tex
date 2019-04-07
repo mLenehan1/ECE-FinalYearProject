@@ -91,9 +91,9 @@
 
 I would like to thank my project supervisor, Dr.~Martin Collier. He
 provided guidance and assistance with all aspects of this project, and
-his knowledge and insight on the topic were invaluable. I would also
-like to thank Dr.~Gabriel-Miro Muntean, who acted as the second assessor
-for this project. His insight into testing practices, which gave greater
+his knowledge and insight on the topic was invaluable. I would also like
+to thank Dr.~Gabriel-Miro Muntean, who acted as the second assessor for
+this project for his insight into testing practices, which gave greater
 clarity to the overall project results.
 
 \begingroup
@@ -128,18 +128,30 @@ Name: \underline{Michael Lenehan} Date: \underline{08/04/2019}
 
 \chapter{Abstract}\label{abstract}
 
-Open-Source audio server softwares are numerous. The most popular
-available options for embedded linux devices are intended for use as
-``headless'' audio devices, controlled over the network, and outputting
-their audio locally. With a large number of subscription based audio
-streaming services available, such as Spotify, Tidal, and Google Play
-Music, there is an increasing need for an option to stream a users own
-music, from a central storage device, to their client device of choice.
+With the widespread adoption of audio streaming services such as
+Spotify, Tidal, and Google Play Music, there is a need for a high
+quality audio streaming option for locally stored audio. Open-source
+audio server softwares can provide this functionality, although they are
+intended for use in ``headless'' audio setups, controlled over the
+network, outputting their audio locally.
 
-The addition of listener tracking allows a user to play audio through
-multiple speakers as they traverse a space, such as their home, without
-needing to play music through all available speakers, or without turning
-device volumes up or down.
+This project aims to implement an audio server solution which can stream
+music over the network to a number of client devices, at high quality,
+with minimal audio artefact's. Audio playback across the client devices
+must be synchronised in order to provide a satisfactory user experience.
+
+Open-source audio streaming software ``Snapcast'' is used in order to
+implement multi-output synchronised audio playback across a number of
+network connected client devices.
+
+In addition to synchronised audio playback, listener tracking will be
+implemented in such a way as to allow a user traverse a space, such as
+their home, with the audio level altered as the listener approaches or
+distances themselves from the client device.
+
+Finally, the system volume control and listener tracking will be
+combined in a cross-platform application, built using the ``Flutter''
+framework.
 
 \chapter{Introduction}\label{introduction}
 
@@ -347,8 +359,8 @@ be used to calculate and approximate distance\cite{Park15}. Using
 filtering techniques, distances may be calculated, using Bluetooth, to
 an accuracy of approximately 1.8 meters\cite{Park15}.
 
-Location using WiFi may provide greater accuracy, however requires
-specialised hardware\cite{Gjengset14}. The 802.11AC WiFi standard allows
+Location using Wi-Fi may provide greater accuracy, however requires
+specialised hardware\cite{Gjengset14}. The 802.11AC Wife standard allows
 for the use of Beamforming, in which multiple antennas transmit at once,
 allowing for the targeted transmission of data\cite{Heejung14}. Using
 Angle-of-Arrival (AoA), Time-of-Flight (ToF), and Multiple Signal
@@ -368,9 +380,9 @@ specifications allow for ranging requests, which provide the requesting
 device with a distance estimate, based on the received signal strength
 indication (RSSI) from beacon device to the user device.
 
-\subsection{802.11MC WiFi}\label{mc-wifi}
+\subsection{802.11MC Wi-Fi}\label{mc-wi-fi}
 
-The 802.11MC WiFi protocol provides location determination
+The 802.11MC Wi-Fi protocol provides location determination
 functionality, using Round Trip Time (RTT). This protocol, if
 implemented on the embedded Linux platforms, would allow for ranging
 requests to be performed from Android devices on API level 28 (Android 9
@@ -569,14 +581,17 @@ and not platform specific code, may be executed on both Android and iOS
 devices, for example, the JSON volume control code could be executed on
 an iOS device, if available.
 
+All code can be found in the public GitHub at the following location:
+\url{https://github.com/mLenehanDCU/ECEIOTProject}
+
 \section{Extensibility}\label{extensibility}
 
 An ideal solution to the system proposed in this project would provide
-extensibility, both in the number of clients, and in teh number of
+extensibility, both in the number of clients, and in the number of
 concurrent users. With the implementation of Snapcast, any number of
 client devices may be used, so long as the network can handle the number
 of connections. Many router/access points combinations have a limit on
-the nnumber of Wi-Fi devices which can be connected to the network at
+the number of Wi-Fi devices which can be connected to the network at
 once, with the Sky Q Hub used having a maximum number of 64 connected
 devices\cite{SkyQ}.
 
@@ -586,7 +601,7 @@ between closely placed beacons could result in the scanning application
 choosing to route audio to the incorrect client device. However, as
 Snapcast can group client devices, and modify group volumes rather than
 individual volumes, client devices placed in too close of a proximity
-for accureate differentiation could be grouped, with one device in a
+for accurate differentiation could be grouped, with one device in a
 group acting as a BLE beacon.
 
 Within the context of a home audio setup, it could be desirable to have
@@ -595,7 +610,7 @@ client, at the same time. MPD and Mopidy can both be configure to run in
 multiple instances on the same device, with different ports. From these
 multiple audio server software instances, audio can be fed to Snapcast,
 which has the ability to be configured with multiple streams, from
-multiple inputs, which can be assigned by the useri\cite{snapcastZones}.
+multiple inputs, which can be assigned by the user\cite{snapcastZones}.
 
 \chapter{Experimental Equipment and
 Procedures}\label{experimental-equipment-and-procedures}
@@ -740,14 +755,14 @@ ranging requests done at distances of 1-5 meters at one meter intervals.
 
 Nicolas Bridoux's ``Beacon Scanner'' Android
 application\cite{beaconscan} is used in order to approximate the
-distance from the Android device to the AltBeacon, utilising bluetooth
+distance from the Android device to the AltBeacon, utilising Bluetooth
 RSSI to estimate this distance. The following information may be taken
 from the application:
 
 \begin{itemize}
  \item "Beacon Type"
  \begin{itemize}
-  \item Returns the type of bluetooth beacon being used, e.g. iBeacon,
+  \item Returns the type of Bluetooth beacon being used, e.g. iBeacon,
   Eddystone Beacon, and AltBeacon
  \end{itemize}
  \item "Beacon ID"
@@ -756,22 +771,22 @@ from the application:
  \end{itemize}
  \item "RSSI"
  \begin{itemize}
-  \item The Received Signal Strength Indication from the bluetooth beacon to
+  \item The Received Signal Strength Indication from the Bluetooth beacon to
   the Android device
  \end{itemize}
  \item "TX"
  \begin{itemize}
-  \item The signal transmission strength from the bluetooth beacon
+  \item The signal transmission strength from the Bluetooth beacon
  \end{itemize}
 \end{itemize}
 
 \subsection{Testing Steps:}\label{testing-steps-1}
 
 The following test procedure must be followed in order to retrieve data
-for the ranging accuracy of the bluetooth beacons.
+for the ranging accuracy of the Bluetooth beacons.
 
 \begin{enumerate}
- \item Using ssh, connect to the bluetooth beacon device.
+ \item Using ssh, connect to the Bluetooth beacon device.
  \begin{itemize}
   \item \$ ssh pi@<Beacon Device IP>
  \end{itemize}
@@ -782,7 +797,7 @@ for the ranging accuracy of the bluetooth beacons.
  \item Enable Bluetooth on the Android device.
  \item Run the Beacon Scanner application on the Android device.
  \item Place the Android device at a distance of 1m from the beacon device.
- \item Begin scanning for bluetooth devices.
+ \item Begin scanning for Bluetooth devices.
  \item Record the estimated distance from the beacon device to the Android
  device.
  \item Repeat steps 5-7 for distances of 2, 3, 4, and 5 meters.
@@ -797,7 +812,7 @@ seen in Section \ref{clienttrackresults}.
 \section{\texorpdfstring{Audio Server Software Implementation
 \label{audioserverimplementation}}{Audio Server Software Implementation }}\label{audio-server-software-implementation}
 
-In order to excecute the required testing of the audio server software,
+In order to execute the required testing of the audio server software,
 the following softwares must be installed on the server device, and the
 following configurations completed.
 
@@ -827,7 +842,7 @@ execution at specified times, or set time intervals \cite{crontab}.
 Using a crontable, a file for entering cron jobs, the required testing
 schedule can be run on the audio server Raspberry Pi. For the purposes
 of testing the audio server software while streaming audio files of
-different formats, a crontable is configured to play audio in the Wave
+different formats, a crontable is configured to play audio in the WAV
 format, followed by audio in the FLAC format, followed by audio in the
 MP3 format. Each audio format is played continuously for two hours, with
 a two minute space between formats.
@@ -865,7 +880,7 @@ audio_output {
 
 On the Mopidy server device, the configuration file, found at the
 location ``/etc/mopidy/mopidy.conf'' must be modified in order to output
-audio to the Snapcast server. The defualt audio output must be removed,
+audio to the Snapcast server. The default audio output must be removed,
 with a new ``filesink'' output added as follows:
 
 \lstset{
@@ -882,9 +897,9 @@ audio/x-raw,rate=48000,channels=2,format=S16LE
 \end{lstlisting}
 
 These audio outputs are used to feed audio to the Snapcast server, to be
-send via the network to the Snapcast client devices. The MPD
-configuration can also be used on the Volumio server, as Volumio
-utilises MPD and it's configuration files for its audio playback.
+sent via the network to the Snapcast client devices. The MPD
+configuration can also be used on the Volumio server as Volumio utilises
+MPD and it's configuration files for its audio playback.
 
 \section{Audio Server Software
 Testing}\label{audio-server-software-testing}
@@ -897,8 +912,8 @@ temperature, CPU load, and CPU frequency monitored and recorded.
 Testing setup consists of three Raspberry Pi's, each running the
 Raspbian Stretch Light OS, with the exception of the Volumio server test
 configuration. One Raspberry Pi runs the audio server software, and the
-Snapcast server software. The second Raspberry Pi runs the Snapclient
-software. The final Raspberry Pi runs the Munin server software,
+Snapcast server software. The second Raspberry Pi runs the Snapcast
+client software. The final Raspberry Pi runs the Munin server software,
 allowing to monitor the clients, which are running on the other two
 Raspberry Pi's. Both the audio server device and the Munin server device
 are connected to the network router/access point via Ethernet, with the
@@ -926,7 +941,7 @@ commands to be run on the Raspberry Pi, sent from a client PC.
 \subsection{BlueZ}\label{bluez}
 
 BlueZ is the ``Official Linux Bluetooth protocol stack''\cite{bluez}.
-BlueZ provides a number of code examples for creating bluetooth beacons,
+BlueZ provides a number of code examples for creating Bluetooth beacons,
 using the AltBeacon protocol. These examples can be modified for the
 creation of AltBeacons with unique ID's, and allow for the calibration
 of these beacons.
@@ -935,7 +950,7 @@ of these beacons.
 Application}\label{beacon-scanner-application}
 
 The Beacon Scanner android application allows for the monitoring and
-ranging of bluetooth beacons from an android device\cite{beaconscan}.
+ranging of Bluetooth beacons from an android device\cite{beaconscan}.
 Utilising Bluetooth RSSI, the application estimates the distance from
 the Android device to the Bluetooth beacon. The device reports on beacon
 type, ID, RSSI, and Transmission power. These parameters allow for the
@@ -964,7 +979,7 @@ The distance results obtained from the execution of the testing steps
 outlined in Section \ref{expprocedure} must be utilised to create tables
 of physical distance, estimated distance, and the deviation of the
 estimate from the actual distance. As such, these tables may be used in
-the analysis of the accuracy of bluetooth beacons in location
+the analysis of the accuracy of Bluetooth beacons in location
 determination.
 
 \chapter{Results and Analysis}\label{results-and-analysis}
@@ -986,9 +1001,9 @@ for each of the audio server software solutions.
 
 The network information for the MPD Server and SnapClient configuration
 below shows there are no Ethernet errors or traffic on the Client
-device, as it is connected to the network via WiFi. Conversely, on the
+device, as it is connected to the network via Wi-Fi. Conversely, on the
 Server device, there are Wireless network errors, and traffic values, as
-the server device is both setup on the network via WiFi and Ethernet.
+the server device is both setup on the network via Wi-Fi and Ethernet.
 
 \begin{table}[H]
 \centering
@@ -1389,7 +1404,7 @@ temperature on the Client device has an average value of 44.63
 \degree C.
 
 The CPU frequency of the Server device kept, on average, at the maximum
-frequency of 1.4GHz, with all four CPU cores frequecny scaling at
+frequency of 1.4GHz, with all four CPU cores frequency scaling at
 646.91MHz, and average temperature of 58.94 \degree C.
 
 \begin{table}[H]
@@ -1552,7 +1567,7 @@ traffic.
 
 Within the System measurements, it can be seen that the Server device
 uses on average 965MB of the 1GB of available RAM, has average load of
-0.11. The Server device has approxiamtely 2.61\% CPU Usage on average.
+0.11. The Server device has approximately 2.61\% CPU Usage on average.
 
 The Client device uses, on average, 224MB of the available 1GB of RAM,
 and has system load of 0.14 on average. The Client device averages
@@ -1692,7 +1707,7 @@ Analysis}\label{audio-server-software-analysis}
 \label{AudioServerSoftwareAnalysis}
 
 From the results in Table \ref{MPDclientserverNetTab}, Table
-\ref{MopidyclientserverNetTab}, Table and
+\ref{MopidyclientserverNetTab}, and Table
 \ref{VolumioclientserverNetTab} it can be seen that the Mopidy Audio
 Server experienced the least Ethernet drops, and the most outbound
 Ethernet Traffic (with the same value as Volumio). The Mopidy server
@@ -1727,19 +1742,19 @@ Mopidy Servers had system CPU Usage values of \(5.89\%\) and \(3.64\%\),
 with maximum values of \(15.08\%\) and \(7.53\%\) respectively.
 
 From the results in Table \ref{MPDclientserverSensorTab}, Table
-\ref{MopidyclientserverSensorTab}, Table
+\ref{MopidyclientserverSensorTab}, and Table
 \ref{VolumioclientserverSensorTab} it can be seen that the lowest
 average CPU frequency, temperature, and CPU frequency scaling were
 achieved by the MPD server. This server had an average CPU frequency of
 \(656.53MHz\), average CPU frequency scaling of \(691.30MHz\), and
 average CPU temperature of \(56.11 \degree C\). The Mopidy and Volumio
 Servers had average CPU frequency values of \(1.4GHz\), with average
-frequecy scaling values of \(646.91MHz\) and \(1.4GHz\) respectively.
+frequency scaling values of \(646.91MHz\) and \(1.4GHz\) respectively.
 The low CPU frequency value of the MPD Server device can be attributed
 to a number of issues, such as thermal throttling, however, due to
 idling, the device can also lower CPU frequency to 600MHz\cite{RPiFreq}.
 
-While streaming, there were no noticable audio issues detected. It can
+While streaming, there were no noticeable audio issues detected. It can
 be seen in the case of all audio server softwares, Section
 \ref{MuninData}, the highest network throughput occurs for files of the
 WAV format, followed by MP3. The lowest network throughput is
@@ -1854,13 +1869,13 @@ maximum deviation of 2.65 meters, with a minimum deviation of 0.02
 meters. There is an average deviation of 0.618 meters. There is no
 direct correlation between increases in physical distance, and increases
 in the BLE distance estimate visible from the captured data. More
-thourough testing would be required in order to more accurately
-determine the accuracy of the BLE distance estimates. From the obtained
-results however, it can be seen that a minimum accuracy of within 2
-meters may be achieved, which is sufficient for movement within a home
-environment. This, in addition to the multiple measurements being taken,
-will allow for greater accuracy, with outlier values being able to be
-discarded from measurements.
+thorough testing would be required in order to more accurately determine
+the accuracy of the BLE distance estimates. From the obtained results
+however, it can be seen that a minimum accuracy of within 2 meters may
+be achieved, which is sufficient for movement within a home environment.
+This, in addition to the multiple measurements being taken, will allow
+for greater accuracy, with outlier values being able to be discarded
+from measurements.
 
 \chapter{Ethics}\label{ethics}
 
@@ -1870,10 +1885,10 @@ While there have been questions raised in recent years over the ethical
 problems with streaming services, and the revenue paid to artists whose
 music is played via their platforms, there are also a number of issues
 with audio piracy from users illegally downloading audio tracks. As
-solutions such as the one provided by this project offer both options
-for both streaming and locally stored audio, these ethical issues must
-be explored in order to determine the impact that a solution such as
-this may have.
+solutions such as the one provided by this project offer options for
+both streaming and locally stored audio, these ethical issues must be
+explored in order to determine the impact that a solution such as this
+may have.
 
 \subsection{Streaming Solutions}\label{streaming-solutions}
 
@@ -1946,7 +1961,7 @@ consumption\cite{onlinePiracy}. While the Global Online Piracy
 Study\cite{onlinePiracy} suggests that audio piracy is decreasing, MUSO,
 a company aiming to study and solve issues with audio piracy, has stated
 in their annual piracy report a 1.6\% increase in global piracy in
-2017\cite{muso}. Joost and Quintais however contest these figures,
+2017\cite{muso}. Joost and Quintais, however, contest these figures,
 noting that MUSO ``overestimate the number of and visits to pirate
 websites''\cite{onlinePiracy}.
 
@@ -1977,7 +1992,7 @@ As proximity based services become more common, it becomes increasingly
 important to ensure the protection of a users personal data, and
 location information. Both the Apple App Store, and Google Play Store
 require that any application which requires access to location services,
-or to bluetooth services request permission from the user to access
+or to Bluetooth services request permission from the user to access
 these services. This allows users the ability to block applications
 accessing this information. Furthermore, laws have been introduced
 prohibiting companies from using personal data from non-consenting
@@ -2042,10 +2057,10 @@ functionalities. With both code implementations combined in the same
 application, audio volume on the client devices could be automatically
 determined via the listeners location.
 
-With the introduction of 802.11mc access points, and Android Pie, the
+With the introduction of 802.11MC access points, and Android Pie, the
 Android Wi-Fi Round Trip Time implementation could be used for more
-accurate location determination. If the embedded linux platforms used
-for the client and server devices had support for this 802.11mc
+accurate location determination. If the embedded Linux platforms used
+for the client and server devices had support for this 802.11MC
 protocol, the same server software implementation could be used, with
 RTT ranging used in the place of Bluetooth ranging.
 
