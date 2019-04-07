@@ -25,5 +25,8 @@ https://www4.dcu.ie/sites/default/files/policy/1%20-%20integrity_and_plagiarism\
 and IEEE referencing guidelines found at
 https://loop.dcu.ie/mod/url\hspace{0pt}/view.php?id=448779.
 
+\vskip 1cm
+Signed: \underline{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ } \hspace{20mm}Date: \underline{08/04/2019}
 
-Name: \underline{Michael Lenehan} Date: \underline{08/04/2019}
+\hspace*{0mm}\phantom{Signed: }Michael Lenehan
+
